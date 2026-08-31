@@ -379,6 +379,42 @@ header h1 {
   }
 }
 
+.footer {
+  background-color: #0f172a;
+  color: #94a3b8;
+  padding: var(--espaciado-md) 5%;
+  font-size: 0.875rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer > * {
+  flex: 1;
+}
+
+.footer-nombre {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.footer-slogan {
+  text-align: right;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE */
+/*COMO FUNCIONA*/
 @media (max-width: 900px) {
   .como-funciona-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -390,7 +426,7 @@ header h1 {
     grid-template-columns: 1fr;
   }
 }
-
+/* REPORTES ACTIVOS */
 @media (max-width: 900px) {
   .reportes-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -400,5 +436,35 @@ header h1 {
 @media (max-width: 600px) {
   .reportes-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/*FOOTER*/
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nombre,
+  .footer-copyright,
+  .footer-slogan {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: var(--espaciado-md) 3%;
+    gap: 0.8rem;
+  }
+
+  .footer-nombre {
+    font-size: 1rem;
+  }
+
+  .footer-slogan {
+    font-size: 0.8rem;
   }
 }
