@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="SosTucumán, reclamos Tucumán, reporte de baches, luminarias rotas, bacheo San Miguel de Tucumán, gestión urbana"
+    />
+    <meta
+      name="description"
+      content="Plataforma ciudadana para reportar baches, luminarias rotas y microbasurales en Tucumán."
+    />
+    <meta name="author" content="Carrizo Lucas - Geronimo Sol" />
+    <!-- ESTRATEGIAS SEO PARA SER AGREGADAS DPS (falta info)
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SosTucumán | Vos sos parte del cambio">
+    <meta property="og:description" content="Reportá incidencias barriales en tiempo real y colaborá en el mantenimiento de la ciudad.">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://sostucuman.com.ar">
+    -->
+
+    <link rel="stylesheet" href="style.css" />
+    <title>SosTucumán</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>SosTucumán</h1>
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#reportes">Reportes activos</a>
+        <a href="#nuevoReporte" class="btn-nav-reportar">Reportar</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <h2>Mejoremos nuestra ciudad juntos</h2>
+          <p>
+            Reportá baches, luminarias rotas o basurales en tiempo real y seguí
+            el estado de tu reclamo.
+          </p>
+          <div class="hero-buttons">
+            <a href="#reportes" class="btn-ppal">Hacer un reporte</a>
+            <a href="#reportes" class="btn-secundario">Ver reclamos activos</a>
+          </div>
+        </div>
+      </section>
+      <section id="categorias" class="categoria-section">
+        <h3 class="section-titulo">Tipos de categorías</h3>
+        <div class="categorias-grid">
+          <article class="categoria-card">
+            <h4>💡 Alumbrado</h4>
+            <p>Luminarias apagadas o cables caídos.</p>
+          </article>
+          <article class="categoria-card">
+            <h4>🕳️ Baches y calles</h4>
+            <p>Roturas de calzada y veredas.</p>
+          </article>
+          <article class="categoria-card">
+            <h4>🗑️ Higiene Urbana</h4>
+            <p>Microbasurales y ramas acumuladas.</p>
+          </article>
+          <article class="categoria-card">
+            <h4>🚦 Semáforos</h4>
+            <p>Semáforos intermitentes o fuera de servicio.</p>
+          </article>
+        </div>
+        <section id="como-funciona">
+          <div class="section-header">
+            <h2 class="section-title-cf">¿Cómo funciona?</h2>
+            <p class="section-subtitle-cf">
+              Si detectás una incidencia en la ciudad, podés reportarla en 4
+              simples pasos.
+            </p>
+          </div>
+
+          <div class="como-funciona-grid">
+            <article class="como-funciona-card">
+              <h3>1. Marcá la ubicación</h3>
+              <p>
+                Activá tu geolocalización o señalá el punto exacto en el mapa
+                interactivo.
+              </p>
+            </article>
+            <article class="como-funciona-card">
+              <h3>2. Subí una foto</h3>
+              <p>
+                Subí una foto como evidencia del problema desde tu celular o
+                computadora.
+              </p>
+            </article>
+            <article class="como-funciona-card">
+              <h3>3. Describí el problema</h3>
+              <p>
+                Elegí la categoría y agregá una breve descripción o referencia
+                del lugar.
+              </p>
+            </article>
+            <article class="como-funciona-card">
+              <h3>4. Seguí el reclamo</h3>
+              <p>
+                El municipio recibe la alerta a través de nosotros y podés ver
+                las actualizaciones de estado en tiempo real.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section id="reportes" class="reportes-section">
+          <h3 class="section-titulo">Reportes activos</h3>
+          <div class="reportes-grid">
+            <article class="reporte-tarjeta">
+              <img
+                class="reporte-imagen"
+                src="/img/bache.jfif"
+                alt="Bache en calle"
+              />
+              <p class="reporte-parrafo">
+                Bache profundo sobre Av. Mate de Luna, altura 1200. Reportado
+                hace 2 días.
+              </p>
+              <div class="reporte-votos">
+                <button
+                  class="reporte-boton reporte-boton-like"
+                  aria-label="De acuerdo"
+                >
+                  👍
+                </button>
+                <button
+                  class="reporte-boton reporte-boton-dislike"
+                  aria-label="En desacuerdo"
+                >
+                  👎
+                </button>
+              </div>
+            </article>
+            <article class="reporte-tarjeta">
+              <img
+                class="reporte-imagen"
+                src="/img/semaforo.jfif"
+                alt="Semoforo fuera de servicio"
+              />
+              <p class="reporte-parrafo">
+                Semáforo sin funcionar en esquina de Marcos Paz y Maipu.
+                Reportado hace 1 día.
+              </p>
+              <div class="reporte-votos">
+                <button
+                  class="reporte-boton reporte-boton-like"
+                  aria-label="De acuerdo"
+                >
+                  👍
+                </button>
+                <button
+                  class="reporte-boton reporte-boton-dislike"
+                  aria-label="En desacuerdo"
+                >
+                  👎
+                </button>
+              </div>
+            </article>
+            <article class="reporte-tarjeta">
+              <img
+                class="reporte-imagen"
+                src="/img/basura.jfif"
+                alt="Microbasural"
+              />
+              <p class="reporte-parrafo">
+                Microbasural sobre calle Lavalle al 800. Reportado hace 1 día.
+              </p>
+              <div class="reporte-votos">
+                <button
+                  class="reporte-boton reporte-boton-like"
+                  aria-label="De acuerdo"
+                >
+                  👍
+                </button>
+                <button
+                  class="reporte-boton reporte-boton-dislike"
+                  aria-label="En desacuerdo"
+                >
+                  👎
+                </button>
+              </div>
+            </article>
+            <article id="nuevoReporte" class="reportes-accion">
+              <button class="btn-nuevo-reporte">+ Nuevo reporte</button>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <span class="footer-nombre">SosTucumán</span>
+      <p class="footer-copyright">
+        &copy; <span id="year"></span> Todos los derechos reservados.
+      </p>
+      <p class="footer-slogan">
+        Vos ves el problema, nosotros lo llevamos al municipio.
+      </p>
+    </footer>
+  </body>
+</html>
