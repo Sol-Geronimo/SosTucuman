@@ -413,6 +413,8 @@ header h1 {
   font-size: 0.85rem;
 }
 
+/* RESPONSIVE */
+/*COMO FUNCIONA*/
 @media (max-width: 900px) {
   .como-funciona-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -424,7 +426,7 @@ header h1 {
     grid-template-columns: 1fr;
   }
 }
-
+/* REPORTES ACTIVOS */
 @media (max-width: 900px) {
   .reportes-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -436,6 +438,8 @@ header h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/*FOOTER*/
 
 @media (max-width: 768px) {
   .footer {
@@ -447,5 +451,20 @@ header h1 {
   .footer-copyright,
   .footer-slogan {
     text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: var(--espaciado-md) 3%;
+    gap: 0.8rem;
+  }
+
+  .footer-nombre {
+    font-size: 1rem;
+  }
+
+  .footer-slogan {
+    font-size: 0.8rem;
   }
 }
