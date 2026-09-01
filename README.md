@@ -90,7 +90,7 @@ El Responsive Design se construyó combinando **unidades relativas (`%`, `rem`, 
    - Las imágenes de las tarjetas usan `width: 100%` con `object-fit: cover` para mantener la proporción sin deformarse.
    - Contenedores principales limitados con `max-width: 1200px` y `padding: ... 5%` para que nunca toquen el borde de la pantalla.
 
-   ## 🚀 Estrategias SEO, Estructura Semántica y Accesibilidad
+## 🚀 Estrategias SEO, Estructura Semántica y Accesibilidad
 
 En **SosTucumán** aplicamos buenas prácticas de posicionamiento orgánico (SEO), optimización _Responsive_ y maquetación semántica para mejorar el rastreo en motores de búsqueda y ofrecer una mejor experiencia de usuario.
 
