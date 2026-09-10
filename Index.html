@@ -25,6 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet" />
   <title>SosTucumán</title>
+  <link rel="icon" type="image/png" href="img/log.png">
 </head>
 
 <body class="bg-body-tertiary text-dark">
@@ -741,13 +742,15 @@
           </div>
 
           <!-- Flechas de navegación -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="prev">
+          <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselAlumbrado"
+            data-bs-slide="prev">
             <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
               style="width: 40px; height: 40px">
               <i class="bi bi-chevron-left text-white"></i>
             </span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="next">
+          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselAlumbrado"
+            data-bs-slide="next" style="right: -2rem;">
             <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
               style="width: 40px; height: 40px">
               <i class="bi bi-chevron-right text-white"></i>
@@ -1154,13 +1157,15 @@
           </div>
 
           <!-- Flechas -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselBaches" data-bs-slide="prev">
+          <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselBaches"
+            data-bs-slide="prev">
             <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
               style="width: 40px; height: 40px">
               <i class="bi bi-chevron-left text-white"></i>
             </span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselBaches" data-bs-slide="next">
+          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselBaches"
+            data-bs-slide="next" style="right: -2rem;">
             <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
               style="width: 40px; height: 40px">
               <i class="bi bi-chevron-right text-white"></i>
@@ -1565,439 +1570,441 @@
             </div>
 
             <!-- Flechas -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigiene" data-bs-slide="prev">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 40px; height: 40px">
-                <i class="bi bi-chevron-left text-white"></i>
-              </span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHigiene" data-bs-slide="next">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 40px; height: 40px">
-                <i class="bi bi-chevron-right text-white"></i>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <!-- CATEGORÍA 4: SEMÁFOROS Y TRÁNSITO -->
-        <div class="position-relative px-2">
-          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
-            <h3 class="h4 fw-bold text-dark mb-0">
-              <i class="bi bi-stoplights-fill text-primary me-2"></i>Semáforos
-              y Tránsito
-            </h3>
-            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
-          </div>
-
-          <!-- Carrusel Móvil -->
-          <div id="carouselSemaforosMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover" alt="Semáforo descompuesto"
-                    style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
-                        <small class="text-muted">Hace 1 día</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Riesgo de congestión y siniestralidad por obras en la
-                        calzada o mala sincronización en intersecciones de
-                        alto flujo, en el cruce de Marcos Paz y Maipú.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 41
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
-                    alt="Semáforo con falla de sincronización" style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En revisión</span>
-                        <small class="text-muted">Hace 2 días</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Fallo electrónico/sincronización con encendido
-                        simultáneo de luces opuestas (rojo y verde), generando
-                        peligro extremo de colisión, sobre Av. Aconquija al
-                        1000.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 12
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
-                    alt="Semáforo con todas las luces encendidas" style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
-                        <small class="text-muted">Hace 4 días</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Cortocircuito o falla en la placa controladora del
-                        semáforo con todas las luces encendidas al mismo
-                        tiempo, Av. Belgrano esquina Salta.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 19
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
-                    alt="Operario reparando el cableado" style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
-                        <small class="text-muted">Hace 6 días</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Interrupción del servicio por mantenimiento preventivo
-                        o reparación de plaqueta electrónica, frente a Plaza
-                        Independencia.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 5
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
-                    alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
-                        <small class="text-muted">Hace 1 sem</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Daño físico o vandalismo en las viseras del semáforo,
-                        reduciendo la visibilidad de la señal lumínica con luz
-                        solar directa, en 25 de Mayo 400.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 23
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                  <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
-                    alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
-                  <div class="card-body d-flex flex-column justify-content-between p-4">
-                    <div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
-                        <small class="text-muted">Hace 1 sem</small>
-                      </div>
-                      <p class="card-text text-secondary small fw-medium mb-3">
-                        Tramo vehicular de alta velocidad donde fallas en la
-                        onda verde provocan frenadas intempestivas, en Av.
-                        Colón 200.
-                      </p>
-                    </div>
-                    <div class="d-flex gap-2 pt-2 border-top">
-                      <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 30
-                      </button>
-                      <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSemaforosMobile"
-              data-bs-slide="prev">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 36px; height: 36px">
-                <i class="bi bi-chevron-left text-white"></i>
-              </span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselSemaforosMobile"
-              data-bs-slide="next">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 36px; height: 36px">
-                <i class="bi bi-chevron-right text-white"></i>
-              </span>
-            </button>
-          </div>
-
-          <!-- Carrusel Escritorio -->
-          <div id="carouselSemaforos" class="carousel slide d-none d-md-block" data-bs-ride="false">
-            <div class="carousel-inner">
-              <!-- Slide 1 -->
-              <div class="carousel-item active">
-                <div class="row g-3">
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover"
-                        alt="Semáforo descompuesto" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
-                            <small class="text-muted">Hace 1 día</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Riesgo de congestión y siniestralidad por obras en
-                            la calzada o mala sincronización en intersecciones
-                            de alto flujo, en el cruce de Marcos Paz y Maipú.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 41
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
-                        alt="Semáforo con falla de sincronización" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En revisión</span>
-                            <small class="text-muted">Hace 2 días</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Fallo electrónico/sincronización con encendido
-                            simultáneo de luces opuestas (rojo y verde),
-                            generando peligro extremo de colisión, sobre Av.
-                            Aconquija al 1000.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 12
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
-                        alt="Semáforo con todas las luces encendidas" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
-                            <small class="text-muted">Hace 4 días</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Cortocircuito o falla en la placa controladora del
-                            semáforo con todas las luces encendidas al mismo
-                            tiempo, Av. Belgrano esquina Salta.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 19
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="carousel-item">
-                <div class="row g-3">
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
-                        alt="Operario reparando el cableado" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
-                            <small class="text-muted">Hace 6 días</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Interrupción del servicio por mantenimiento
-                            preventivo o reparación de plaqueta electrónica,
-                            frente a Plaza Independencia.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 5
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
-                        alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
-                            <small class="text-muted">Hace 1 sem</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Daño físico o vandalismo en las viseras del
-                            semáforo, reduciendo la visibilidad de la señal
-                            lumínica con luz solar directa, en 25 de Mayo 400.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 23
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-md-4">
-                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                      <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
-                        alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
-                      <div class="card-body d-flex flex-column justify-content-between p-4">
-                        <div>
-                          <div class="d-flex justify-content-between align-items-center mb-2">
-                            <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
-                            <small class="text-muted">Hace 1 sem</small>
-                          </div>
-                          <p class="card-text text-secondary small fw-medium mb-3">
-                            Tramo vehicular de alta velocidad donde fallas en
-                            la onda verde provocan frenadas intempestivas, en
-                            Av. Colón 200.
-                          </p>
-                        </div>
-                        <div class="d-flex gap-2 pt-2 border-top">
-                          <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 30
-                          </button>
-                          <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Flechas -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSemaforos"
+            <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselHigiene"
               data-bs-slide="prev">
               <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
                 style="width: 40px; height: 40px">
                 <i class="bi bi-chevron-left text-white"></i>
               </span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselSemaforos"
-              data-bs-slide="next">
+            <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselHigiene"
+              data-bs-slide="next" style="right: -2rem;">
               <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
                 style="width: 40px; height: 40px">
                 <i class="bi bi-chevron-right text-white"></i>
               </span>
             </button>
           </div>
+
+          <!-- CATEGORÍA 4: SEMÁFOROS Y TRÁNSITO -->
+          <div class="mt-5 position-relative px-2">
+            <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+              <h3 class="h4 fw-bold text-dark mb-0 ">
+                <i class="bi bi-stoplights-fill text-primary me-2"></i>Semáforos
+                y Tránsito
+              </h3>
+              <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+            </div>
+
+            <!-- Carrusel Móvil -->
+            <div id="carouselSemaforosMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover" alt="Semáforo descompuesto"
+                      style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                          <small class="text-muted">Hace 1 día</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Riesgo de congestión y siniestralidad por obras en la
+                          calzada o mala sincronización en intersecciones de
+                          alto flujo, en el cruce de Marcos Paz y Maipú.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
+                      alt="Semáforo con falla de sincronización" style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En revisión</span>
+                          <small class="text-muted">Hace 2 días</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Fallo electrónico/sincronización con encendido
+                          simultáneo de luces opuestas (rojo y verde), generando
+                          peligro extremo de colisión, sobre Av. Aconquija al
+                          1000.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
+                      alt="Semáforo con todas las luces encendidas" style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                          <small class="text-muted">Hace 4 días</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Cortocircuito o falla en la placa controladora del
+                          semáforo con todas las luces encendidas al mismo
+                          tiempo, Av. Belgrano esquina Salta.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
+                      alt="Operario reparando el cableado" style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                          <small class="text-muted">Hace 6 días</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Interrupción del servicio por mantenimiento preventivo
+                          o reparación de plaqueta electrónica, frente a Plaza
+                          Independencia.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
+                      alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                          <small class="text-muted">Hace 1 sem</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Daño físico o vandalismo en las viseras del semáforo,
+                          reduciendo la visibilidad de la señal lumínica con luz
+                          solar directa, en 25 de Mayo 400.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
+                      alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
+                    <div class="card-body d-flex flex-column justify-content-between p-4">
+                      <div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                          <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                          <small class="text-muted">Hace 1 sem</small>
+                        </div>
+                        <p class="card-text text-secondary small fw-medium mb-3">
+                          Tramo vehicular de alta velocidad donde fallas en la
+                          onda verde provocan frenadas intempestivas, en Av.
+                          Colón 200.
+                        </p>
+                      </div>
+                      <div class="d-flex gap-2 pt-2 border-top">
+                        <button
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                        </button>
+                        <button
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselSemaforosMobile"
+                data-bs-slide="prev">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                  style="width: 36px; height: 36px">
+                  <i class="bi bi-chevron-left text-white"></i>
+                </span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselSemaforosMobile"
+                data-bs-slide="next">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                  style="width: 36px; height: 36px">
+                  <i class="bi bi-chevron-right text-white"></i>
+                </span>
+              </button>
+            </div>
+
+            <!-- Carrusel Escritorio -->
+            <div id="carouselSemaforos" class="carousel slide d-none d-md-block" data-bs-ride="false">
+              <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover"
+                          alt="Semáforo descompuesto" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                              <small class="text-muted">Hace 1 día</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Riesgo de congestión y siniestralidad por obras en
+                              la calzada o mala sincronización en intersecciones
+                              de alto flujo, en el cruce de Marcos Paz y Maipú.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
+                          alt="Semáforo con falla de sincronización" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En
+                                revisión</span>
+                              <small class="text-muted">Hace 2 días</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Fallo electrónico/sincronización con encendido
+                              simultáneo de luces opuestas (rojo y verde),
+                              generando peligro extremo de colisión, sobre Av.
+                              Aconquija al 1000.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
+                          alt="Semáforo con todas las luces encendidas" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                              <small class="text-muted">Hace 4 días</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Cortocircuito o falla en la placa controladora del
+                              semáforo con todas las luces encendidas al mismo
+                              tiempo, Av. Belgrano esquina Salta.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
+                          alt="Operario reparando el cableado" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                              <small class="text-muted">Hace 6 días</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Interrupción del servicio por mantenimiento
+                              preventivo o reparación de plaqueta electrónica,
+                              frente a Plaza Independencia.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
+                          alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                              <small class="text-muted">Hace 1 sem</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Daño físico o vandalismo en las viseras del
+                              semáforo, reduciendo la visibilidad de la señal
+                              lumínica con luz solar directa, en 25 de Mayo 400.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                      <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                        <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
+                          alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                          <div>
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                              <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                              <small class="text-muted">Hace 1 sem</small>
+                            </div>
+                            <p class="card-text text-secondary small fw-medium mb-3">
+                              Tramo vehicular de alta velocidad donde fallas en
+                              la onda verde provocan frenadas intempestivas, en
+                              Av. Colón 200.
+                            </p>
+                          </div>
+                          <div class="d-flex gap-2 pt-2 border-top">
+                            <button
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                            </button>
+                            <button
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Flechas -->
+              <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselSemaforos"
+                data-bs-slide="prev">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                  style="width: 40px; height: 40px">
+                  <i class="bi bi-chevron-left text-white"></i>
+                </span>
+              </button>
+              <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselSemaforos"
+                data-bs-slide="next" style="right: -2rem;">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                  style="width: 40px; height: 40px">
+                  <i class="bi bi-chevron-right text-white"></i>
+                </span>
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
   </main>
   <!-- FOOTER -->
