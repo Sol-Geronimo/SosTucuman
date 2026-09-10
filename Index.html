@@ -1,207 +1,2107 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="keywords"
-      content="SosTucumán, reclamos Tucumán, reporte de baches, luminarias rotas, bacheo San Miguel de Tucumán, gestión urbana"
-    />
-    <meta
-      name="description"
-      content="Plataforma ciudadana para reportar baches, luminarias rotas y microbasurales en Tucumán."
-    />
-    <meta name="author" content="Carrizo Lucas - Geronimo Sol" />
-    <!-- ESTRATEGIAS SEO PARA SER AGREGADAS DPS (falta info)
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords"
+    content="SosTucumán, reclamos Tucumán, reporte de baches, luminarias rotas, bacheo San Miguel de Tucumán, gestión urbana" />
+  <meta name="description"
+    content="Plataforma ciudadana para reportar baches, luminarias rotas y microbasurales en Tucumán." />
+  <meta name="author" content="Carrizo Lucas - Geronimo Sol" />
+  <!-- ESTRATEGIAS SEO PARA SER AGREGADAS DPS (falta info)
     <meta property="og:type" content="website">
     <meta property="og:title" content="SosTucumán | Vos sos parte del cambio">
     <meta property="og:description" content="Reportá incidencias barriales en tiempo real y colaborá en el mantenimiento de la ciudad.">
     <meta property="og:image" content="">
     <meta property="og:url" content="https://sostucuman.com.ar">
     -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
 
-    <link rel="stylesheet" href="style.css" />
-    <title>SosTucumán</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet" />
+  <title>SosTucumán</title>
+</head>
 
-  <body>
-    <header>
-      <h1>SosTucumán</h1>
-      <nav class="nav-links">
-        <a href="#inicio">Inicio</a>
-        <a href="#categorias">Categorías</a>
-        <a href="#como-funciona">Cómo funciona</a>
-        <a href="#reportes">Reportes activos</a>
-        <a href="#nuevoReporte" class="btn-nav-reportar">Reportar</a>
-      </nav>
-    </header>
+<body class="bg-body-tertiary text-dark">
+  <header class="sticky-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg py-3 container">
+      <a class="navbar-brand fw-bold text-primary fs-4" href="#inicio">
+        <img src="img/log.png" alt="Logo SosTucumán" height="36" class="d-inline-block align-text-top me-2" />
+        SosTucumán
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <main>
-      <section id="inicio" class="hero">
-        <div class="hero-content">
-          <h2>Mejoremos nuestra ciudad juntos</h2>
-          <p>
-            Reportá baches, luminarias rotas o basurales en tiempo real y seguí
-            el estado de tu reclamo.
-          </p>
-          <div class="hero-buttons">
-            <a href="#reportes" class="btn-ppal">Hacer un reporte</a>
-            <a href="#reportes" class="btn-secundario">Ver reclamos activos</a>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2 gap-lg-3 mt-3 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#categorias">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#como-funciona">Cómo funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#reportes">Reportes activos</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a href="#nuevoReporte" class="btn btn-primary px-4 py-2 rounded-3 fw-bold text-white shadow-sm">
+              Reportar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECCIÓN INICIO / HERO -->
+    <section id="inicio" class="py-5 text-white text-center d-flex align-items-center" style="
+          min-height: 60vh;
+          background:
+            linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
+            url(&quot;img/caption.jpg&quot;) center/cover no-repeat;
+        ">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8">
+            <h1 class="display-4 fw-bold mb-3" style="
+                  font-family: &quot;Mouse Memoirs&quot;, sans-serif;
+                  letter-spacing: 1.5px;
+                ">
+              MEJOREMOS NUESTRA CIUDAD JUNTOS
+            </h1>
+            <p class="lead text-white mb-4">
+              Reportá baches, luminarias rotas o basurales en tiempo real y
+              seguí el estado de tu reclamo.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <a href="#reportes"
+                class="btn btn-outline-primary border-white text-white btn-lg px-4 py-2 rounded-3 fw-semibold shadow-sm">
+                Hacer un reporte
+              </a>
+              <a href="#reportes" class="btn btn-outline-light btn-lg px-4 py-2 rounded-3 fw-semibold">
+                Ver reclamos activos
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-      <section id="categorias" class="categoria-section">
-        <h3 class="section-titulo">Tipos de categorías</h3>
-        <div class="categorias-grid">
-          <article class="categoria-card">
-            <h4>💡 Alumbrado</h4>
-            <p>Luminarias apagadas o cables caídos.</p>
-          </article>
-          <article class="categoria-card">
-            <h4>🕳️ Baches y calles</h4>
-            <p>Roturas de calzada y veredas.</p>
-          </article>
-          <article class="categoria-card">
-            <h4>🗑️ Higiene Urbana</h4>
-            <p>Microbasurales y ramas acumuladas.</p>
-          </article>
-          <article class="categoria-card">
-            <h4>🚦 Semáforos</h4>
-            <p>Semáforos intermitentes o fuera de servicio.</p>
-          </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN CATEGORÍAS -->
+    <section id="categorias" class="py-5 text-white border-top border-bottom position-relative" style="
+          min-height: 60vh;
+          background: linear-gradient(
+            135deg,
+            #9ab1e6 0%,
+            #4065cb 50%,
+            #72a4ef 100%
+          );
+        ">
+      <div class="container py-4">
+        <div class="row align-items-end mb-4">
+          <div class="col-md-8">
+            <span class="text-white fw-bold text-uppercase small tracking-wide">Clasificación</span>
+            <h2 class="h1 fw-bold text-dark mb-0">
+              ¿Qué querés reportar hoy?
+            </h2>
+          </div>
+          <div class="col-md-4 text-md-end mt-2 mt-md-0">
+            <small class="text-white">Seleccioná una categoría para explorar</small>
+          </div>
         </div>
-        <section id="como-funciona">
-          <div class="section-header">
-            <h2 class="section-title-cf">¿Cómo funciona?</h2>
-            <p class="section-subtitle-cf">
-              Si detectás una incidencia en la ciudad, podés reportarla en 4
-              simples pasos.
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 bg-white rounded-4 shadow-sm hover-top transition-all">
+              <div class="card-body p-4 d-flex flex-column justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-info-subtle text-info-emphasis p-3 rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style="width: 56px; height: 56px">
+                    <i class="bi bi-lightbulb-fill fs-3"></i>
+                  </div>
+                  <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-1">Luminarias</span>
+                </div>
+
+                <div>
+                  <h3 class="h5 fw-bold text-dark mb-2">Alumbrado Público</h3>
+                  <p class="card-text text-secondary small mb-0">
+                    Focos apagados, cables caídos o luminarias rotas en la vía
+                    pública.
+                  </p>
+                </div>
+
+                <a href="#reportes" class="stretched-link text-decoration-none"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 bg-white rounded-4 shadow-sm hover-top transition-all">
+              <div class="card-body p-4 d-flex flex-column justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style="width: 56px; height: 56px">
+                    <i class="bi bi-cone-striped fs-3"></i>
+                  </div>
+                  <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-1">Vía Pública</span>
+                </div>
+
+                <div>
+                  <h3 class="h5 fw-bold text-dark mb-2">Baches y Calles</h3>
+                  <p class="card-text text-secondary small mb-0">
+                    Roturas de calzada, hundimientos de pavimento y veredas en
+                    mal estado.
+                  </p>
+                </div>
+
+                <a href="#reportes" class="stretched-link text-decoration-none"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 bg-white rounded-4 shadow-sm hover-top transition-all">
+              <div class="card-body p-4 d-flex flex-column justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-info-subtle text-info-emphasis p-3 rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style="width: 56px; height: 56px">
+                    <i class="bi bi-trash3-fill fs-3"></i>
+                  </div>
+                  <span class="badge bg-info-subtle text-info-emphasis rounded-pill px-3 py-1">Limpieza</span>
+                </div>
+
+                <div>
+                  <h3 class="h5 fw-bold text-dark mb-2">Higiene Urbana</h3>
+                  <p class="card-text text-secondary small mb-0">
+                    Microbasurales, contenedores desbordados o restos de poda
+                    sin retirar.
+                  </p>
+                </div>
+
+                <a href="#reportes" class="stretched-link text-decoration-none"></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 border-0 bg-white rounded-4 shadow-sm hover-top transition-all">
+              <div class="card-body p-4 d-flex flex-column justify-content-between">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                  <div
+                    class="bg-primary-subtle text-primary p-3 rounded-circle d-inline-flex align-items-center justify-content-center"
+                    style="width: 56px; height: 56px">
+                    <i class="bi bi-stoplights-fill fs-3"></i>
+                  </div>
+                  <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-1">Tránsito</span>
+                </div>
+
+                <div>
+                  <h3 class="h5 fw-bold text-dark mb-2">Semáforos</h3>
+                  <p class="card-text text-secondary small mb-0">
+                    Semáforos intermitentes, apagados o desincronizados en la
+                    ciudad.
+                  </p>
+                </div>
+
+                <a href="#reportes" class="stretched-link text-decoration-none"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN CÓMO FUNCIONA -->
+    <section id="como-funciona" class="py-5 border-top border-bottom" style="background-color: #d2e3f7">
+      <div class="container py-4">
+        <div class="row align-items-center g-4 g-lg-5">
+          <!-- Columna izquierda: Título y descripción -->
+          <div class="col-12 col-lg-4 text-center text-lg-start">
+            <h2 class="display-6 fw-bold text-primary mt-2 mb-3">
+              ¿Cómo funciona?
+            </h2>
+            <p class="text-secondary mb-0">
+              En cuatro pasos, tu reporte llega con información clara para
+              facilitar su seguimiento.
             </p>
           </div>
 
-          <div class="como-funciona-grid">
-            <article class="como-funciona-card">
-              <h3>1. Marcá la ubicación</h3>
-              <p>
-                Activá tu geolocalización o señalá el punto exacto en el mapa
-                interactivo.
-              </p>
-            </article>
-            <article class="como-funciona-card">
-              <h3>2. Subí una foto</h3>
-              <p>
-                Subí una foto como evidencia del problema desde tu celular o
-                computadora.
-              </p>
-            </article>
-            <article class="como-funciona-card">
-              <h3>3. Describí el problema</h3>
-              <p>
-                Elegí la categoría y agregá una breve descripción o referencia
-                del lugar.
-              </p>
-            </article>
-            <article class="como-funciona-card">
-              <h3>4. Seguí el reclamo</h3>
-              <p>
-                El municipio recibe la alerta a través de nosotros y podés ver
-                las actualizaciones de estado en tiempo real.
-              </p>
-            </article>
+          <!-- Columna derecha: Grilla 2x2 de pasos -->
+          <div class="col-12 col-lg-8">
+            <div class="row g-4">
+              <!-- Paso 1 -->
+              <div class="col-12 col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div
+                    class="bg-primary text-white rounded-4 d-flex align-items-center justify-content-center flex-shrink-0 fw-bold fs-5 shadow-sm"
+                    style="width: 46px; height: 46px">
+                    1
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary mb-1">
+                      Marcá la ubicación
+                    </h3>
+                    <p class="text-secondary small mb-0">
+                      Indicá la calle, altura o referencia más cercana al
+                      problema.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paso 2 -->
+              <div class="col-12 col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div
+                    class="bg-primary text-white rounded-4 d-flex align-items-center justify-content-center flex-shrink-0 fw-bold fs-5 shadow-sm"
+                    style="width: 46px; height: 46px">
+                    2
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary mb-1">
+                      Subí una foto
+                    </h3>
+                    <p class="text-secondary small mb-0">
+                      Una imagen ayuda a identificar el incidente con mayor
+                      precisión.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paso 3 -->
+              <div class="col-12 col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div
+                    class="bg-primary text-white rounded-4 d-flex align-items-center justify-content-center flex-shrink-0 fw-bold fs-5 shadow-sm"
+                    style="width: 46px; height: 46px">
+                    3
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary mb-1">
+                      Describí el problema
+                    </h3>
+                    <p class="text-secondary small mb-0">
+                      Contá brevemente qué sucede y si representa un riesgo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Paso 4 -->
+              <div class="col-12 col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div
+                    class="bg-primary text-white rounded-4 d-flex align-items-center justify-content-center flex-shrink-0 fw-bold fs-5 shadow-sm"
+                    style="width: 46px; height: 46px">
+                    4
+                  </div>
+                  <div>
+                    <h3 class="h5 fw-bold text-primary mb-1">
+                      Seguí el reclamo
+                    </h3>
+                    <p class="text-secondary small mb-0">
+                      Consultá los reportes activos y sus actualizaciones de
+                      estado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
-        <section id="reportes" class="reportes-section">
-          <h3 class="section-titulo">Reportes activos</h3>
-          <div class="reportes-grid">
-            <article class="reporte-tarjeta">
-              <img
-                class="reporte-imagen"
-                src="/img/bache.jfif"
-                alt="Bache en calle"
-              />
-              <p class="reporte-parrafo">
-                Bache profundo sobre Av. Mate de Luna, altura 1200. Reportado
-                hace 2 días.
-              </p>
-              <div class="reporte-votos">
-                <button
-                  class="reporte-boton reporte-boton-like"
-                  aria-label="De acuerdo"
-                >
-                  👍
-                </button>
-                <button
-                  class="reporte-boton reporte-boton-dislike"
-                  aria-label="En desacuerdo"
-                >
-                  👎
-                </button>
-              </div>
-            </article>
-            <article class="reporte-tarjeta">
-              <img
-                class="reporte-imagen"
-                src="/img/semaforo.jfif"
-                alt="Semoforo fuera de servicio"
-              />
-              <p class="reporte-parrafo">
-                Semáforo sin funcionar en esquina de Marcos Paz y Maipu.
-                Reportado hace 1 día.
-              </p>
-              <div class="reporte-votos">
-                <button
-                  class="reporte-boton reporte-boton-like"
-                  aria-label="De acuerdo"
-                >
-                  👍
-                </button>
-                <button
-                  class="reporte-boton reporte-boton-dislike"
-                  aria-label="En desacuerdo"
-                >
-                  👎
-                </button>
-              </div>
-            </article>
-            <article class="reporte-tarjeta">
-              <img
-                class="reporte-imagen"
-                src="/img/basura.jfif"
-                alt="Microbasural"
-              />
-              <p class="reporte-parrafo">
-                Microbasural sobre calle Lavalle al 800. Reportado hace 1 día.
-              </p>
-              <div class="reporte-votos">
-                <button
-                  class="reporte-boton reporte-boton-like"
-                  aria-label="De acuerdo"
-                >
-                  👍
-                </button>
-                <button
-                  class="reporte-boton reporte-boton-dislike"
-                  aria-label="En desacuerdo"
-                >
-                  👎
-                </button>
-              </div>
-            </article>
-            <article id="nuevoReporte" class="reportes-accion">
-              <button class="btn-nuevo-reporte">+ Nuevo reporte</button>
-            </article>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN REPORTES ACTIVOS -->
+    <section id="reportes" class="py-5 border-top border-bottom position-relative" style="
+          min-height: 60vh;
+          background: linear-gradient(
+            135deg,
+            #d0dcfa 0%,
+            #8faee6 50%,
+            #b4d0fd 100%
+          );
+        ">
+      <div class="container py-4">
+        <div class="row align-items-center mb-4">
+          <div class="col-md-8 text-center text-md-start">
+            <span class="text-primary fw-bold text-uppercase small tracking-wide">Comunidad en acción</span>
+            <h2 class="h1 fw-bold text-dark mb-0">Reportes activos</h2>
           </div>
-        </section>
-      </section>
-    </main>
-    <footer class="footer">
-      <span class="footer-nombre">SosTucumán</span>
-      <p class="footer-copyright">
-        &copy; <span id="year"></span> Todos los derechos reservados.
-      </p>
-      <p class="footer-slogan">
-        Vos ves el problema, nosotros lo llevamos al municipio.
-      </p>
-    </footer>
-  </body>
+          <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
+            <a href="#nuevoReporte" class="btn btn-primary rounded-3 fw-bold shadow-sm px-4 py-2">
+              <i class="bi bi-plus-lg me-1"></i> Nuevo reporte
+            </a>
+          </div>
+        </div>
+
+        <!-- CATEGORÍA 1: ALUMBRADO PÚBLICO -->
+        <div class="mb-5 position-relative px-2">
+          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+            <h3 class="h4 fw-bold text-dark mb-0">
+              <i class="bi bi-lightbulb-fill text-primary me-2"></i>Alumbrado
+              Público
+            </h3>
+            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+          </div>
+
+          <!-- Carrusel Móvil (1 tarjeta por slide) -->
+          <div id="carouselAlumbradoMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico1.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Poste apagado con vidrio protector roto" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 1 día</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Poste de luz roto y expuesto a inclemencias o
+                        vandalismo. Senderos del Parque 9 de Julio.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 18
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico2.jpeg" class="card-img-top w-100 object-fit-cover" alt="Cable expuesto"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                        <small class="text-muted">Hace 2 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Cubierta de lámpara desprendida con riesgo de caída
+                        sobre la calzada. Avenida Mate de Luna 1205.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico3.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Poste de luz caído" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 3 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Colapso total de poste con peligro de electrocución e
+                        interrupción del servicio. Avenida Ejército del Norte
+                        y Santiago Del Estero.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico4.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Caja de registro eléctrico abierta" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 4 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Cableado de alumbrado al descubierto sobre la vereda
+                        con riesgo para peatones. Bulnes 1450.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 27
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico5.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Poste de servicios con cableado expuesto" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                        <small class="text-muted">Hace 5 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Inclinación severa de columna con riesgo inminente de
+                        caída hacia la calle y cableado expuesto. San Martin y
+                        Maipú.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 40
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/AlumbradoPublico6.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Poste de hormigón quebrado" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 6 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Columna de hormigón fracturada en la base apoyada
+                        hacia el frente de una vivienda. Corrientes 2203.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlumbradoMobile"
+              data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlumbradoMobile"
+              data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+          <!-- Carrusel Escritorio/Tablet (3 tarjetas por slide) -->
+          <div id="carouselAlumbrado" class="carousel slide d-none d-md-block" data-bs-ride="false">
+            <div class="carousel-inner">
+              <!-- Slide 1 (Tarjetas 1 a 3) -->
+              <div class="carousel-item active">
+                <div class="row g-3">
+                  <!-- Tarjeta 1 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico1.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Poste apagado con vidrio protector roto" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 1 día</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Poste de luz roto y expuesto a inclemencias o
+                            vandalismo. Senderos del Parque 9 de Julio.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 18
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tarjeta 2 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico2.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Cable expuesto" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                            <small class="text-muted">Hace 2 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Cubierta de lámpara desprendida con riesgo de
+                            caída sobre la calzada. Avenida Mate de Luna 1205.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico3.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Poste de luz caído" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 3 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Colapso total de poste con peligro de
+                            electrocución e interrupción del servicio. Avenida
+                            Ejército del Norte y Santiago Del Estero.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 (Tarjetas 4 a 6) -->
+              <div class="carousel-item">
+                <div class="row g-3">
+                  <!-- Tarjeta 4 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico4.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Caja de registro eléctrico abierta" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 4 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Cableado de alumbrado al descubierto sobre la
+                            vereda con riesgo para peatones. Bulnes 1450.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 27
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tarjeta 5 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico5.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Poste de servicios con cableado expuesto" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                            <small class="text-muted">Hace 5 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Inclinación severa de columna con riesgo inminente
+                            de caída hacia la calle y cableado expuesto. San
+                            Martin y Maipú.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 40
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Tarjeta 6 -->
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/AlumbradoPublico6.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Poste de hormigón quebrado" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 6 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Columna de hormigón fracturada en la base apoyada
+                            hacia el frente de una vivienda. Corrientes 2203.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flechas de navegación -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="prev">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+              style="width: 40px; height: 40px">
+              <i class="bi bi-chevron-left text-white"></i>
+            </span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="next">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+              style="width: 40px; height: 40px">
+              <i class="bi bi-chevron-right text-white"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- CATEGORÍA 2: BACHES Y CALLES -->
+        <div class="mb-5 position-relative px-2">
+          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+            <h3 class="h4 fw-bold text-dark mb-0">
+              <i class="bi bi-cone-striped text-primary me-2"></i>Baches y
+              Calles
+            </h3>
+            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+          </div>
+
+          <!-- Carrusel Móvil -->
+          <div id="carouselBachesMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/bache.jfif" class="card-img-top w-100 object-fit-cover" alt="Pozo con agua estancada"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 2 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Pozo profundo en la capa asfáltica que genera roturas
+                        de neumáticos y peligro de caídas para motociclistas.
+                        en Av. Mate de Luna al 1200.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 15
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Bache1.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Calle de tierra y ripio inundada" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 3 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Deterioro severo del terreno por falta de
+                        pavimentación, acumulación de agua y anegamiento
+                        prolongado, sobre calle Jujuy al 400.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 24
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Bache2.jpeg" class="card-img-top w-100 object-fit-cover" alt="Bache profundo"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 5 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Hundimiento y pérdida de la carpeta de hormigón en
+                        plena calzada por rotura o reparación inconclusa, en
+                        San Martín 800.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 8
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Bache3.jpeg" class="card-img-top w-100 object-fit-cover" alt="Pozo circular en la calle"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                        <small class="text-muted">Hace 1 sem</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Rotura de pavimento asociada a filtraciones o colapso
+                        de la red de agua/cloacas con agua estancada, en Av.
+                        Kirchner y Pellegrini.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 3
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Bache4.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Calle con asfalto destruido" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 1 sem</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Calzada totalmente destruida por levantamiento de
+                        pavimento, escombros abandonados y falta de drenaje,
+                        en Av. Alem al 300.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Bache5.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Corte de calle con pavimento deteriorado" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 8 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        ntenso anegamiento de la calzada que oculta profundos
+                        baches en una intersección vial, en Pasaje Padilla al
+                        100.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBachesMobile"
+              data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBachesMobile"
+              data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+          <!-- Carrusel Escritorio -->
+          <div id="carouselBaches" class="carousel slide d-none d-md-block" data-bs-ride="false">
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/bache.jfif" class="card-img-top w-100 object-fit-cover"
+                        alt="Pozo con agua estancada" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 2 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Pozo profundo en la capa asfáltica que genera
+                            roturas de neumáticos y peligro de caídas para
+                            motociclistas. en Av. Mate de Luna al 1200.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 15
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Bache1.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Calle de tierra y ripio inundada" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 3 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Deterioro severo del terreno por falta de
+                            pavimentación, acumulación de agua y anegamiento
+                            prolongado, sobre calle Jujuy al 400.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 24
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Bache2.jpeg" class="card-img-top w-100 object-fit-cover" alt="Bache profundo"
+                        style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 5 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Hundimiento y pérdida de la carpeta de hormigón en
+                            plena calzada por rotura o reparación inconclusa,
+                            en San Martín 800.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 8
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Bache3.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Pozo circular en la calle" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                            <small class="text-muted">Hace 1 sem</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Rotura de pavimento asociada a filtraciones o
+                            colapso de la red de agua/cloacas con agua
+                            estancada, en Av. Kirchner y Pellegrini.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 3
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Bache4.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Calle con asfalto destruido" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 1 sem</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Calzada totalmente destruida por levantamiento de
+                            pavimento, escombros abandonados y falta de
+                            drenaje, en Av. Alem al 300.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Bache5.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Corte de calle con pavimento deteriorado" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 8 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Intenso anegamiento de la calzada que oculta
+                            profundos baches en una intersección vial, en
+                            Pasaje Padilla al 100.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flechas -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselBaches" data-bs-slide="prev">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+              style="width: 40px; height: 40px">
+              <i class="bi bi-chevron-left text-white"></i>
+            </span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselBaches" data-bs-slide="next">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+              style="width: 40px; height: 40px">
+              <i class="bi bi-chevron-right text-white"></i>
+            </span>
+          </button>
+        </div>
+
+        <!-- CATEGORÍA 3: HIGIENE URBANA -->
+        <div class="mb-5 position-relative px-2">
+          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+            <h3 class="h4 fw-bold text-dark mb-0">
+              <i class="bi bi-trash3-fill text-primary me-2"></i>Higiene
+              Urbana
+            </h3>
+            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+          </div>
+
+          <!-- Carrusel Móvil -->
+          <div id="carouselHigieneMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/basura.jfif" class="card-img-top w-100 object-fit-cover" alt="Contenedores desbordados"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 1 día</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Desborde de contenedores e imbornales tapados por
+                        acumulación de residuos en zonas comerciales. calle
+                        Lavalle al 800. Olores fuertes.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 28
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Basural1.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Contenedor urbano rodeado de residuos" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 2 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Microbasural urbano generado alrededor de los
+                        contenedores por falta de recolección a tiempo, en
+                        Rondeau 500.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Basural2.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Operarios municipales limpiando" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 3 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Acumulación clandestina de residuos domiciliarios y
+                        malezas en márgenes de la vía pública, en Av.
+                        Sarmiento 300.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 9
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Basural3.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="terreno con restos de residuos" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                        <small class="text-muted">Hace 4 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Reincidencia de vertederos ilegales en zonas
+                        señalizadas como prohibidas, en Av. Roca 1500.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 38
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Basural4.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Contenedores con gran cúmulo de basura" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 5 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Colapso de puntos limpios comunitarios con
+                        esparcimiento de basura hacia la calzada, en Catamarca
+                        al 700.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 17
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Basural5.jpeg" class="card-img-top w-100 object-fit-cover" alt="Montículo de escombros"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 6 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Arrojo indebido de escombros de construcción en la
+                        calzada obstaculizando el paso peatonal y vehicular,
+                        en San Lorenzo esquina La Rioja.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 22
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigieneMobile"
+              data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHigieneMobile"
+              data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- Carrusel Escritorio -->
+          <div id="carouselHigiene" class="carousel slide d-none d-md-block" data-bs-ride="false">
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/basura.jfif" class="card-img-top w-100 object-fit-cover"
+                        alt="Contenedores desbordados" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 1 día</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Desborde de contenedores e imbornales tapados por
+                            acumulación de residuos en zonas comerciales.
+                            calle Lavalle al 800. Olores fuertes.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 28
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Basural1.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Contenedor urbano rodeado de residuos" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 2 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Microbasural urbano generado alrededor de los
+                            contenedores por falta de recolección a tiempo, en
+                            Rondeau 500.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Basural2.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Operarios municipales limpiando" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 3 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Acumulación clandestina de residuos domiciliarios
+                            y malezas en márgenes de la vía pública, en Av.
+                            Sarmiento 300.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 9
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Basural3.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="terreno con restos de residuos" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                            <small class="text-muted">Hace 4 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Reincidencia de vertederos ilegales en zonas
+                            señalizadas como prohibidas, en Av. Roca 1500.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 38
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Basural4.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Contenedores con gran cúmulo de basura" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 5 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Colapso de puntos limpios comunitarios con
+                            esparcimiento de basura hacia la calzada, en
+                            Catamarca al 700.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 17
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Basural5.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Montículo de escombros" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 6 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Arrojo indebido de escombros de construcción en la
+                            calzada obstaculizando el paso peatonal y
+                            vehicular, en San Lorenzo esquina La Rioja.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 22
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flechas -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigiene" data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 40px; height: 40px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHigiene" data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 40px; height: 40px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- CATEGORÍA 4: SEMÁFOROS Y TRÁNSITO -->
+        <div class="position-relative px-2">
+          <div class="d-flex align-items-center justify-content-between mb-3 border-bottom pb-2">
+            <h3 class="h4 fw-bold text-dark mb-0">
+              <i class="bi bi-stoplights-fill text-primary me-2"></i>Semáforos
+              y Tránsito
+            </h3>
+            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+          </div>
+
+          <!-- Carrusel Móvil -->
+          <div id="carouselSemaforosMobile" class="carousel slide d-block d-md-none" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover" alt="Semáforo descompuesto"
+                    style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                        <small class="text-muted">Hace 1 día</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Riesgo de congestión y siniestralidad por obras en la
+                        calzada o mala sincronización en intersecciones de
+                        alto flujo, en el cruce de Marcos Paz y Maipú.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Semáforo con falla de sincronización" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En revisión</span>
+                        <small class="text-muted">Hace 2 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Fallo electrónico/sincronización con encendido
+                        simultáneo de luces opuestas (rojo y verde), generando
+                        peligro extremo de colisión, sobre Av. Aconquija al
+                        1000.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Semáforo con todas las luces encendidas" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 4 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Cortocircuito o falla en la placa controladora del
+                        semáforo con todas las luces encendidas al mismo
+                        tiempo, Av. Belgrano esquina Salta.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Operario reparando el cableado" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                        <small class="text-muted">Hace 6 días</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Interrupción del servicio por mantenimiento preventivo
+                        o reparación de plaqueta electrónica, frente a Plaza
+                        Independencia.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                        <small class="text-muted">Hace 1 sem</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Daño físico o vandalismo en las viseras del semáforo,
+                        reduciendo la visibilidad de la señal lumínica con luz
+                        solar directa, en 25 de Mayo 400.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                  <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
+                    alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
+                  <div class="card-body d-flex flex-column justify-content-between p-4">
+                    <div>
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                        <small class="text-muted">Hace 1 sem</small>
+                      </div>
+                      <p class="card-text text-secondary small fw-medium mb-3">
+                        Tramo vehicular de alta velocidad donde fallas en la
+                        onda verde provocan frenadas intempestivas, en Av.
+                        Colón 200.
+                      </p>
+                    </div>
+                    <div class="d-flex gap-2 pt-2 border-top">
+                      <button
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                      </button>
+                      <button
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSemaforosMobile"
+              data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSemaforosMobile"
+              data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 36px; height: 36px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+
+          <!-- Carrusel Escritorio -->
+          <div id="carouselSemaforos" class="carousel slide d-none d-md-block" data-bs-ride="false">
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/semaforo.jfif" class="card-img-top w-100 object-fit-cover"
+                        alt="Semáforo descompuesto" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Urgente</span>
+                            <small class="text-muted">Hace 1 día</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Riesgo de congestión y siniestralidad por obras en
+                            la calzada o mala sincronización en intersecciones
+                            de alto flujo, en el cruce de Marcos Paz y Maipú.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Semaforo1.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Semáforo con falla de sincronización" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En revisión</span>
+                            <small class="text-muted">Hace 2 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Fallo electrónico/sincronización con encendido
+                            simultáneo de luces opuestas (rojo y verde),
+                            generando peligro extremo de colisión, sobre Av.
+                            Aconquija al 1000.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Semaforo2.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Semáforo con todas las luces encendidas" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 4 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Cortocircuito o falla en la placa controladora del
+                            semáforo con todas las luces encendidas al mismo
+                            tiempo, Av. Belgrano esquina Salta.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-3">
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Semaforo3.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Operario reparando el cableado" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">En proceso</span>
+                            <small class="text-muted">Hace 6 días</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Interrupción del servicio por mantenimiento
+                            preventivo o reparación de plaqueta electrónica,
+                            frente a Plaza Independencia.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Semaforo4.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Cúpulas plásticas del semáforo dañadas" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger-subtle text-danger rounded-pill">Pendiente</span>
+                            <small class="text-muted">Hace 1 sem</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Daño físico o vandalismo en las viseras del
+                            semáforo, reduciendo la visibilidad de la señal
+                            lumínica con luz solar directa, en 25 de Mayo 400.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4">
+                    <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                      <img src="img/Semaforo5.jpeg" class="card-img-top w-100 object-fit-cover"
+                        alt="Cartel nomenclador de esquina con semáforo" style="height: 240px" />
+                      <div class="card-body d-flex flex-column justify-content-between p-4">
+                        <div>
+                          <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-success-subtle text-success rounded-pill">Resuelto</span>
+                            <small class="text-muted">Hace 1 sem</small>
+                          </div>
+                          <p class="card-text text-secondary small fw-medium mb-3">
+                            Tramo vehicular de alta velocidad donde fallas en
+                            la onda verde provocan frenadas intempestivas, en
+                            Av. Colón 200.
+                          </p>
+                        </div>
+                        <div class="d-flex gap-2 pt-2 border-top">
+                          <button
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flechas -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSemaforos"
+              data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 40px; height: 40px">
+                <i class="bi bi-chevron-left text-white"></i>
+              </span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSemaforos"
+              data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
+                style="width: 40px; height: 40px">
+                <i class="bi bi-chevron-right text-white"></i>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white pt-5 pb-4 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <!-- Columna 1: Marca y Propósito -->
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="img/log.png" alt="Logo SosTucumán" height="32" class="me-2" />
+            <span class="fw-bold fs-4 text-primary">SosTucumán</span>
+          </div>
+          <p class="text-secondary small mb-3">
+            Plataforma ciudadana colaborativa para reportar incidencias
+            urbanas y mejorar los barrios de Tucumán. Vos ves el problema,
+            nosotros lo llevamos al municipio.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px" aria-label="Instagram">
+              <i class="bi bi-instagram text-white"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px" aria-label="Facebook">
+              <i class="bi bi-facebook text-white"></i>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px" aria-label="X Twitter">
+              <i class="bi bi-twitter-x text-white"></i>
+            </a>
+            <a href="https://wa.me" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-secondary btn-sm rounded-circle d-inline-flex align-items-center justify-content-center"
+              style="width: 36px; height: 36px" aria-label="WhatsApp">
+              <i class="bi bi-whatsapp text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h4 class="h6 fw-bold text-white text-uppercase tracking-wide mb-3">
+            Enlaces
+          </h4>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li>
+              <a href="#inicio" class="text-secondary text-decoration-none">Inicio</a>
+            </li>
+            <li>
+              <a href="#categorias" class="text-secondary text-decoration-none">Categorías</a>
+            </li>
+            <li>
+              <a href="#como-funciona" class="text-secondary text-decoration-none">Cómo funciona</a>
+            </li>
+            <li>
+              <a href="#reportes" class="text-secondary text-decoration-none">Reportes activos</a>
+            </li>
+            <li>
+              <a href="#reportes" class="text-primary text-decoration-none fw-semibold">Hacer un reporte</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información de Contacto -->
+        <div class="col-12 col-md-5 col-lg-4">
+          <h4 class="h6 fw-bold text-white text-uppercase tracking-wide mb-3">
+            Contacto ciudadano
+          </h4>
+          <ul class="list-unstyled text-secondary small d-flex flex-column gap-2 mb-0">
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-geo-alt-fill text-primary"></i>
+              <span>San Miguel de Tucumán, Tucumán, Argentina</span>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-envelope-fill text-primary"></i>
+              <a href="mailto:contacto@sostucuman.com.ar"
+                class="text-secondary text-decoration-none">contacto@sostucuman.com.ar</a>
+            </li>
+            <li class="d-flex align-items-center gap-2">
+              <i class="bi bi-telephone-fill text-primary"></i>
+              <span>+54 (381) 456-7890</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4" />
+      <!-- Barra Inferior de Copyright -->
+      <div class="row align-items-center text-center text-md-start gy-2 small text-secondary">
+        <div class="col-12 col-md-6">
+          <p class="mb-0">
+            &copy;2026 SosTucumán. Todos los derechos reservados.
+          </p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <p class="mb-0">Desarrollado por Carrizo Lucas & Geronimo Sol</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
