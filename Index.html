@@ -35,31 +35,18 @@
         <img src="img/log.png" alt="Logo SosTucumán" height="36" class="d-inline-block align-text-top me-2" />
         SosTucumán
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegación">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <div class="d-flex align-items-center gap-2 ms-auto" id="navArea">
 
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-2 gap-lg-3 mt-3 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#inicio">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#categorias">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#como-funciona">Cómo funciona</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#reportes">Reportes activos</a>
-          </li>
-          <li class="nav-item ms-lg-2">
-            <a href="#nuevoReporte" class="btn btn-primary px-4 py-2 rounded-3 fw-bold text-white shadow-sm">
-              Reportar
-            </a>
-          </li>
-        </ul>
+        <button type="button" id="btnAbrirLogin" class="btn btn-outline-primary px-3 py-2 rounded-3 fw-semibold"
+          data-bs-toggle="modal" data-bs-target="#modalAuth" data-auth-tab="login">
+          Iniciar sesión
+        </button>
+
+        <button type="button" id="btnAbrirRegistro" class="btn btn-primary px-3 py-2 rounded-3 fw-semibold text-white"
+          data-bs-toggle="modal" data-bs-target="#modalAuth" data-auth-tab="registro">
+          Registrarse
+        </button>
+
       </div>
     </nav>
   </header>
@@ -1966,8 +1953,7 @@
                             </div>
                             <p class="card-text text-secondary small fw-medium mb-3">
                               Tramo vehicular de alta velocidad donde fallas en
-                              la onda verde provocan frenadas intempestivas, en
-                              Av. Colón 200.
+                              la onda verde provocan frenadas intempestivas,Av.Ejercito del norte y Bolivia.
                             </p>
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
@@ -2106,9 +2092,88 @@
       </div>
     </div>
   </footer>
+  <!-- MODAL DE INICIO DE SESIÓN / REGISTRO -->
+  <div class="modal fade" id="modalAuth" tabindex="-1" aria-labelledby="modalAuthLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h2 class="modal-title h5 fw-bold text-primary" id="modalAuthLabel">Tu cuenta SosTucumán</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-2">
+          <!-- Pestañas Login / Registro -->
+          <ul class="nav nav-tabs nav-fill mb-4" id="authTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active fw-semibold" id="tab-login-btn" data-bs-toggle="tab"
+                data-bs-target="#tab-login" type="button" role="tab" aria-controls="tab-login" aria-selected="true">
+                Iniciar sesión
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link fw-semibold" id="tab-registro-btn" data-bs-toggle="tab"
+                data-bs-target="#tab-registro" type="button" role="tab" aria-controls="tab-registro"
+                aria-selected="false">
+                Registrarse
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="authTabsContent">
+            <!-- FORMULARIO LOGIN -->
+            <div class="tab-pane fade show active" id="tab-login" role="tabpanel" aria-labelledby="tab-login-btn">
+              <form id="formLogin" novalidate>
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label fw-semibold small">Correo electrónico</label>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="vos@correo.com" />
+                  <div class="invalid-feedback" id="loginEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label fw-semibold small">Contraseña</label>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" />
+                  <div class="invalid-feedback" id="loginPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
+                  Ingresar
+                </button>
+              </form>
+            </div>
+
+            <!-- FORMULARIO REGISTRO -->
+            <div class="tab-pane fade" id="tab-registro" role="tabpanel" aria-labelledby="tab-registro-btn">
+              <form id="formRegistro" novalidate>
+                <div class="mb-3">
+                  <label for="regNombre" class="form-label fw-semibold small">Nombre y apellido</label>
+                  <input type="text" class="form-control" id="regNombre" placeholder="Ej:Sofia perez" />
+                  <div class="invalid-feedback" id="regNombreError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regEmail" class="form-label fw-semibold small">Correo electrónico</label>
+                  <input type="email" class="form-control" id="regEmail" placeholder="vos@correo.com" />
+                  <div class="invalid-feedback" id="regEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPassword" class="form-label fw-semibold small">Contraseña</label>
+                  <input type="password" class="form-control" id="regPassword" placeholder="Mínimo 6 caracteres" />
+                  <div class="invalid-feedback" id="regPasswordError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPasswordConfirm" class="form-label fw-semibold small">Repetir contraseña</label>
+                  <input type="password" class="form-control" id="regPasswordConfirm" placeholder="••••••••" />
+                  <div class="invalid-feedback" id="regPasswordConfirmError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
+                  Crear cuenta
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
