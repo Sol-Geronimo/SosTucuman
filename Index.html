@@ -30,36 +30,31 @@
 
 <body class="bg-body-tertiary text-dark">
   <header class="sticky-top bg-white border-bottom shadow-sm">
-    <nav class="navbar navbar-expand-lg py-3 container">
-      <a class="navbar-brand fw-bold text-primary fs-4" href="#inicio">
-        <img src="img/log.png" alt="Logo SosTucumán" height="36" class="d-inline-block align-text-top me-2" />
-        SosTucumán
+    <nav
+      class="navbar navbar-expand-md navbar-light container py-2 py-sm-3 d-flex align-items-center justify-content-between">
+      <!-- Logo/Marca -->
+      <a class="navbar-brand fw-bold text-primary fs-4 m-0 d-flex align-items-center" href="#inicio">
+        <img src="img/log.png" alt="Logo SosTucumán" height="36" class="d-inline-block me-2" />
+        <span>SosTucumán</span>
       </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir navegación">
+
+      <!-- Botón Hamburguesa (Solo cuando NO hay sesión en mobile) -->
+      <button class="navbar-toggler border-0 p-2 shadow-none" type="button" id="btnHamburguesa"
+        data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="menuPrincipal">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-2 gap-lg-3 mt-3 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#inicio">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#categorias">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#como-funciona">Cómo funciona</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-dark fw-semibold" href="#reportes">Reportes activos</a>
-          </li>
-          <li class="nav-item ms-lg-2">
-            <a href="#nuevoReporte" class="btn btn-primary px-4 py-2 rounded-3 fw-bold text-white shadow-sm">
-              Reportar
-            </a>
-          </li>
-        </ul>
+      <!-- Contenedor para botones cuando no hay sesión (Colapsable) -->
+      <div class="collapse navbar-collapse justify-content-end mt-3 mt-md-0" id="navbarContent">
+        <div class="d-flex flex-column flex-md-row align-items-stretch align-items-md-center gap-2" id="navAreaAuth">
+          <!-- Botones de Iniciar sesión / Registro -->
+        </div>
+      </div>
+
+      <!-- Contenedor para el perfil de usuario cuando HAY sesión (Siempre visible al lado del logo) -->
+      <div id="navAreaUser" class="d-none">
+        <!-- Menú desplegable del avatar -->
       </div>
     </nav>
   </header>
@@ -86,10 +81,11 @@
               seguí el estado de tu reclamo.
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
-              <a href="#reportes"
-                class="btn btn-outline-primary border-white text-white btn-lg px-4 py-2 rounded-3 fw-semibold shadow-sm">
+              <button type="button"
+                class="btn btn-outline-primary border-white text-white btn-lg px-4 py-2 rounded-3 fw-semibold shadow-sm"
+                data-bs-toggle="modal" data-bs-target="#modalNuevoReporte">
                 Hacer un reporte
-              </a>
+              </button>
               <a href="#reportes" class="btn btn-outline-light btn-lg px-4 py-2 rounded-3 fw-semibold">
                 Ver reclamos activos
               </a>
@@ -339,9 +335,10 @@
             <h2 class="h1 fw-bold text-dark mb-0">Reportes activos</h2>
           </div>
           <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
-            <a href="#nuevoReporte" class="btn btn-primary rounded-3 fw-bold shadow-sm px-4 py-2">
+            <button type="button" class="btn btn-primary rounded-3 fw-bold shadow-sm px-4 py-2" data-bs-toggle="modal"
+              data-bs-target="#modalNuevoReporte">
               <i class="bi bi-plus-lg me-1"></i> Nuevo reporte
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1966,8 +1963,7 @@
                             </div>
                             <p class="card-text text-secondary small fw-medium mb-3">
                               Tramo vehicular de alta velocidad donde fallas en
-                              la onda verde provocan frenadas intempestivas, en
-                              Av. Colón 200.
+                              la onda verde provocan frenadas intempestivas,Av.Ejercito del norte y Bolivia.
                             </p>
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
@@ -2106,9 +2102,211 @@
       </div>
     </div>
   </footer>
+  <!-- MODAL AUTH RESPONSIVE -->
+  <div class="modal fade" id="modalAuth" tabindex="-1" aria-labelledby="modalAuthLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header border-0 pb-0">
+          <h2 class="modal-title h5 fw-bold text-primary" id="modalAuthLabel">Tu cuenta SosTucumán</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body pt-2 px-3 px-sm-4">
+          <!-- Pestañas Login / Registro -->
+          <ul class="nav nav-tabs nav-fill mb-4" id="authTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active fw-semibold" id="tab-login-btn" data-bs-toggle="tab"
+                data-bs-target="#tab-login" type="button" role="tab" aria-controls="tab-login" aria-selected="true">
+                Iniciar sesión
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link fw-semibold" id="tab-registro-btn" data-bs-toggle="tab"
+                data-bs-target="#tab-registro" type="button" role="tab" aria-controls="tab-registro"
+                aria-selected="false">
+                Registrarse
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="authTabsContent">
+            <!-- FORMULARIO LOGIN -->
+            <div class="tab-pane fade show active" id="tab-login" role="tabpanel" aria-labelledby="tab-login-btn">
+              <form id="formLogin" novalidate>
+                <div class="mb-3">
+                  <label for="loginEmail" class="form-label fw-semibold small">Correo electrónico</label>
+                  <input type="email" class="form-control rounded-3 py-2" id="loginEmail"
+                    placeholder="vos@correo.com" />
+                  <div class="invalid-feedback" id="loginEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="loginPassword" class="form-label fw-semibold small">Contraseña</label>
+                  <input type="password" class="form-control rounded-3 py-2" id="loginPassword"
+                    placeholder="••••••••" />
+                  <div class="invalid-feedback" id="loginPasswordError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
+                  Ingresar
+                </button>
+              </form>
+            </div>
+
+            <!-- FORMULARIO REGISTRO -->
+            <div class="tab-pane fade" id="tab-registro" role="tabpanel" aria-labelledby="tab-registro-btn">
+              <form id="formRegistro" novalidate>
+                <div class="mb-3">
+                  <label for="regNombre" class="form-label fw-semibold small">Nombre y apellido</label>
+                  <input type="text" class="form-control rounded-3 py-2" id="regNombre" placeholder="Ej: Sofía Pérez" />
+                  <div class="invalid-feedback" id="regNombreError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regEmail" class="form-label fw-semibold small">Correo electrónico</label>
+                  <input type="email" class="form-control rounded-3 py-2" id="regEmail" placeholder="vos@correo.com" />
+                  <div class="invalid-feedback" id="regEmailError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPassword" class="form-label fw-semibold small">Contraseña</label>
+                  <input type="password" class="form-control rounded-3 py-2" id="regPassword"
+                    placeholder="Mínimo 6 caracteres" />
+                  <div class="invalid-feedback" id="regPasswordError"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="regPasswordConfirm" class="form-label fw-semibold small">Repetir contraseña</label>
+                  <input type="password" class="form-control rounded-3 py-2" id="regPasswordConfirm"
+                    placeholder="••••••••" />
+                  <div class="invalid-feedback" id="regPasswordConfirmError"></div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
+                  Crear cuenta
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL NUEVO REPORTE RESPONSIVE -->
+  <div class="modal fade" id="modalNuevoReporte" tabindex="-1" aria-labelledby="modalNuevoReporteLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-fullscreen-sm-down">
+      <div class="modal-content border-0 shadow rounded-sm-4">
+
+        <!-- Header del Modal -->
+        <div class="modal-header bg-primary text-white py-3 px-3 px-md-4">
+          <h5 class="modal-title fw-bold d-flex align-items-center gap-2 fs-6 fs-md-5" id="modalNuevoReporteLabel">
+            <i class="bi bi-plus-circle-fill"></i> Crear Nuevo Reporte
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <!-- Body con Formulario -->
+        <div class="modal-body p-3 p-md-4">
+          <form id="formNuevoReporte" class="needs-validation" novalidate>
+
+            <div class="row g-3">
+
+              <!-- Categoría -->
+              <div class="col-12 col-md-6">
+                <label for="selectCategoria" class="form-label fw-semibold text-secondary small">
+                  <i class="bi bi-tag-fill me-1"></i> Categoría
+                </label>
+                <select class="form-select rounded-3 py-2" id="selectCategoria" required>
+                  <option value="" selected disabled>Seleccioná una categoría...</option>
+                  <option value="Baches y Calles">Baches y Calles</option>
+                  <option value="Alumbrado Público">Alumbrado Público</option>
+                  <option value="Basura y Limpieza">Basura y Limpieza</option>
+                  <option value="Semáforos y Tránsito">Semáforos y Tránsito</option>
+                </select>
+                <div class="invalid-feedback">Por favor elegí una categoría.</div>
+              </div>
+
+              <!-- Título del problema -->
+              <div class="col-12 col-md-6">
+                <label for="inputTitulo" class="form-label fw-semibold text-secondary small">
+                  Título breve
+                </label>
+                <input type="text" class="form-control rounded-3 py-2" id="inputTitulo"
+                  placeholder="Ej: Bache en Av. Mate de Luna" required />
+                <div class="invalid-feedback">Ingresá un título representativo.</div>
+              </div>
+
+              <!-- Ubicación / Dirección -->
+              <div class="col-12">
+                <label for="inputUbicacion" class="form-label fw-semibold text-secondary small">
+                  <i class="bi bi-geo-alt-fill me-1 text-danger"></i> Ubicación / Dirección
+                </label>
+                <div class="input-group">
+                  <input type="text" class="form-control rounded-start-3 py-2" id="inputUbicacion"
+                    placeholder="Ej: San Martín 500, San Miguel de Tucumán" required />
+                  <button class="btn btn-outline-secondary px-2 px-sm-3 d-flex align-items-center gap-1" type="button"
+                    id="btnGeolocalizar" title="Usar mi ubicación actual">
+                    <i class="bi bi-crosshair"></i> <span class="d-none d-sm-inline">Mi ubicación</span>
+                  </button>
+                </div>
+                <div class="invalid-feedback">Ingresá la dirección donde ocurrió la incidencia.</div>
+
+                <!-- Vista previa del mapa -->
+                <div id="mapContainer" class="mt-2 rounded-3 overflow-hidden border shadow-sm"
+                  style="height: 180px; display: none;">
+                  <iframe id="googleMapIframe" width="100%" height="100%" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+
+              <!-- Descripción detallada -->
+              <div class="col-12">
+                <label for="textareaDescripcion" class="form-label fw-semibold text-secondary small">
+                  <i class="bi bi-text-paragraph me-1"></i> Descripción del problema
+                </label>
+                <textarea class="form-control rounded-3" id="textareaDescripcion" rows="3"
+                  placeholder="Detallá lo que sucede..." required></textarea>
+                <div class="invalid-feedback">Por favor agrega una breve descripción.</div>
+              </div>
+
+              <!-- Adjuntar Foto -->
+              <div class="col-12">
+                <label for="inputFoto" class="form-label fw-semibold text-secondary small">
+                  <i class="bi bi-camera-fill me-1 text-primary"></i> Foto del problema (Opcional)
+                </label>
+                <input type="file" class="form-control rounded-3" id="inputFoto" accept="image/*" />
+
+                <!-- Previsualización de la imagen -->
+                <div id="previewContainer" class="mt-3 d-none text-center position-relative">
+                  <img id="imgPreview" src="" alt="Previsualización" class="img-fluid rounded-3 shadow-sm"
+                    style="max-height: 180px; object-fit: cover;" />
+                  <button type="button" id="btnQuitarFoto"
+                    class="btn btn-danger btn-sm rounded-circle position-absolute top-0 end-0 m-2 shadow"
+                    title="Quitar imagen">
+                    <i class="bi bi-x-lg"></i>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Alerta de mensaje de error / estado -->
+            <div id="alertaNuevoReporte" class="alert alert-danger mt-3 d-none" role="alert"></div>
+
+            <!-- Footer de Acciones -->
+            <div class="d-flex flex-column-reverse flex-sm-row justify-content-end gap-2 mt-4 pt-3 border-top">
+              <button type="button" class="btn btn-light border px-4 py-2 rounded-3 fw-semibold w-100 w-sm-auto"
+                data-bs-dismiss="modal">Cancelar</button>
+              <button type="submit" id="btnGuardarReporte"
+                class="btn btn-primary px-4 py-2 rounded-3 fw-semibold text-white d-flex align-items-center justify-content-center gap-2 w-100 w-sm-auto">
+                <i class="bi bi-send-fill"></i> Publicar Reporte
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
