@@ -61,7 +61,7 @@
 
   <main>
     <!-- SECCIÓN INICIO / HERO -->
-    <section id="inicio" class="py-5 text-white text-center d-flex align-items-center" style="
+    <section id="inicio" class="py-4 text-white text-center d-flex align-items-center" style="
           min-height: 60vh;
           background:
             linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)),
@@ -96,7 +96,7 @@
     </section>
 
     <!-- SECCIÓN CATEGORÍAS -->
-    <section id="categorias" class="py-5 text-white border-top border-bottom position-relative" style="
+    <section id="categorias" class="py-4 text-white border-top border-bottom position-relative" style="
           min-height: 60vh;
           background: linear-gradient(
             135deg,
@@ -218,7 +218,7 @@
       </div>
     </section>
     <!-- SECCIÓN CÓMO FUNCIONA -->
-    <section id="como-funciona" class="py-5 border-top border-bottom" style="background-color: #d2e3f7">
+    <section id="como-funciona" class="py-4 border-top border-bottom" style="background-color: #d2e3f7">
       <div class="container py-4">
         <div class="row align-items-center g-4 g-lg-5">
           <!-- Columna izquierda: Título y descripción -->
@@ -319,7 +319,7 @@
       </div>
     </section>
     <!-- SECCIÓN REPORTES ACTIVOS -->
-    <section id="reportes" class="py-5 border-top border-bottom position-relative" style="
+    <section id="reportes" class="py-4 border-top border-bottom position-relative" style="
           min-height: 60vh;
           background: linear-gradient(
             135deg,
@@ -349,7 +349,9 @@
               <i class="bi bi-lightbulb-fill text-primary me-2"></i>Alumbrado
               Público
             </h3>
-            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+            <a href="#inicio" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold shadow-sm">
+              Ver más <i class="bi bi-arrow-right-short ms-1"></i>
+            </a>
           </div>
 
           <!-- Carrusel Móvil (1 tarjeta por slide) -->
@@ -372,12 +374,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 18
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-1">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">8</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-1">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -400,12 +404,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-2">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">32</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth "
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-2">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                       </button>
                     </div>
                   </div>
@@ -429,12 +435,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth "
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-3">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">11</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth "
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-3">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -457,12 +465,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 27
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-4">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">27</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-4">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                       </button>
                     </div>
                   </div>
@@ -486,12 +496,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 40
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-5">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">40</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-5">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                       </button>
                     </div>
                   </div>
@@ -514,12 +526,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-6">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">14</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-6">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -565,12 +579,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 18
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-1">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">8</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-1">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -595,12 +611,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-2">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">32</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-2">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                           </button>
                         </div>
                       </div>
@@ -626,12 +644,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-3">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">11</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-3">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -661,12 +681,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 27
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-4">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">27</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-4">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                           </button>
                         </div>
                       </div>
@@ -692,12 +714,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 40
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth "
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-5">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">40</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-5">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                           </button>
                         </div>
                       </div>
@@ -722,12 +746,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-6">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">14</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-6">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -739,17 +765,19 @@
           </div>
 
           <!-- Flechas de navegación -->
-          <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselAlumbrado"
-            data-bs-slide="prev">
-            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-              style="width: 40px; height: 40px">
+          <button
+            class="carousel-control-prev w-auto pe-none position-absolute top-50 translate-middle-y start-0 ms-n3 ms-md-n4 d-none d-md-block"
+            type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="prev">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+              style="width: 40px; height: 40px;">
               <i class="bi bi-chevron-left text-white"></i>
             </span>
           </button>
-          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselAlumbrado"
-            data-bs-slide="next" style="right: -2rem;">
-            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-              style="width: 40px; height: 40px">
+          <button
+            class="carousel-control-next w-auto pe-none position-absolute top-50 translate-middle-y end-0 me-n3 me-md-n4 d-none d-md-block"
+            type="button" data-bs-target="#carouselAlumbrado" data-bs-slide="next">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+              style="width: 40px; height: 40px;">
               <i class="bi bi-chevron-right text-white"></i>
             </span>
           </button>
@@ -762,7 +790,9 @@
               <i class="bi bi-cone-striped text-primary me-2"></i>Baches y
               Calles
             </h3>
-            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+            <a href="#inicio" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold shadow-sm">
+              Ver más <i class="bi bi-arrow-right-short ms-1"></i>
+            </a>
           </div>
 
           <!-- Carrusel Móvil -->
@@ -786,12 +816,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 15
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-7">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">15</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-7">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                       </button>
                     </div>
                   </div>
@@ -815,12 +847,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 24
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-8">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">24</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-8">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                       </button>
                     </div>
                   </div>
@@ -844,12 +878,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 8
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-9">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">8</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-9">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -873,12 +909,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-10">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">32</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 3
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-10">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">3</span>
                       </button>
                     </div>
                   </div>
@@ -902,12 +940,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-11">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">19</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-11">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -931,12 +971,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-12">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">11</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-12">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -982,12 +1024,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 15
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-7">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">15</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-7">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                           </button>
                         </div>
                       </div>
@@ -1012,12 +1056,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 24
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-8">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">24</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-8">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                           </button>
                         </div>
                       </div>
@@ -1042,12 +1088,15 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 8
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-9">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">8</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-9
+    ">
+                            <i class="bi bi-hand-thumbs-down-fill"></i><span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1077,12 +1126,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 32
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-10">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">32</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 3
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-10">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1107,12 +1158,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-11">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">19</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-11">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1137,12 +1190,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 11
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-12">
+                            <i class="bi bi-hand-thumbs-up-fill"></i><span class="count-like">11</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-12">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1154,17 +1209,19 @@
           </div>
 
           <!-- Flechas -->
-          <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselBaches"
-            data-bs-slide="prev">
-            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-              style="width: 40px; height: 40px">
+          <button
+            class="carousel-control-prev w-auto pe-none position-absolute top-50 translate-middle-y start-0 ms-n3 ms-md-n4 d-none d-md-block"
+            type="button" data-bs-target="#carouselBaches" data-bs-slide="prev">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+              style="width: 40px; height: 40px;">
               <i class="bi bi-chevron-left text-white"></i>
             </span>
           </button>
-          <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselBaches"
-            data-bs-slide="next" style="right: -2rem;">
-            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-              style="width: 40px; height: 40px">
+          <button
+            class="carousel-control-next w-auto pe-none position-absolute top-50 translate-middle-y end-0 me-n3 me-md-n4 d-none d-md-block"
+            type="button" data-bs-target="#carouselBaches" data-bs-slide="next">
+            <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+              style="width: 40px; height: 40px;">
               <i class="bi bi-chevron-right text-white"></i>
             </span>
           </button>
@@ -1177,7 +1234,9 @@
               <i class="bi bi-trash3-fill text-primary me-2"></i>Higiene
               Urbana
             </h3>
-            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+            <a href="#inicio" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold shadow-sm">
+              Ver más <i class="bi bi-arrow-right-short ms-1"></i>
+            </a>
           </div>
 
           <!-- Carrusel Móvil -->
@@ -1201,12 +1260,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 28
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-13">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">28</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-13">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                       </button>
                     </div>
                   </div>
@@ -1230,12 +1291,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-14">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">14</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-14">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -1259,12 +1322,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 9
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-15">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">9</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-15">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -1287,12 +1352,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 38
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-16">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">38</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-16">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                       </button>
                     </div>
                   </div>
@@ -1316,12 +1383,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 17
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-17">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">17</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-17">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                       </button>
                     </div>
                   </div>
@@ -1345,12 +1414,14 @@
                     </div>
                     <div class="d-flex gap-2 pt-2 border-top">
                       <button
-                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-up-fill"></i> 22
+                        class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-18">
+                        <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">22</span>
                       </button>
                       <button
-                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                        <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                        class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                        data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-18">
+                        <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                       </button>
                     </div>
                   </div>
@@ -1397,12 +1468,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 28
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-13">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">28</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-13">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                           </button>
                         </div>
                       </div>
@@ -1427,12 +1500,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 14
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-14">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">14</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-14">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1457,12 +1532,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 9
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-15">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">9</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-15">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1491,12 +1568,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 38
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-16">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">38</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-16">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                           </button>
                         </div>
                       </div>
@@ -1521,12 +1600,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 17
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-17">
+                            <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">17</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-17">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                           </button>
                         </div>
                       </div>
@@ -1551,12 +1632,14 @@
                         </div>
                         <div class="d-flex gap-2 pt-2 border-top">
                           <button
-                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-up-fill"></i> 22
+                            class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-18">
+                            <i class="bi bi-hand-thumbs-up-fill"></i><span class="count-like">22</span>
                           </button>
                           <button
-                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                            <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                            class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                            data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-18">
+                            <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                           </button>
                         </div>
                       </div>
@@ -1567,17 +1650,19 @@
             </div>
 
             <!-- Flechas -->
-            <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselHigiene"
-              data-bs-slide="prev">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 40px; height: 40px">
+            <button
+              class="carousel-control-prev w-auto pe-none position-absolute top-50 translate-middle-y start-0 ms-n3 ms-md-n4"
+              type="button" data-bs-target="#carouselHigiene" data-bs-slide="prev">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+                style="width: 40px; height: 40px;">
                 <i class="bi bi-chevron-left text-white"></i>
               </span>
             </button>
-            <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselHigiene"
-              data-bs-slide="next" style="right: -2rem;">
-              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                style="width: 40px; height: 40px">
+            <button
+              class="carousel-control-next w-auto pe-none position-absolute top-50 translate-middle-y end-0 me-n3 me-md-n4"
+              type="button" data-bs-target="#carouselHigiene" data-bs-slide="next">
+              <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+                style="width: 40px; height: 40px;">
                 <i class="bi bi-chevron-right text-white"></i>
               </span>
             </button>
@@ -1590,7 +1675,9 @@
                 <i class="bi bi-stoplights-fill text-primary me-2"></i>Semáforos
                 y Tránsito
               </h3>
-              <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">6 Reportes</span>
+              <a href="#inicio" class="btn btn-outline-primary btn-sm rounded-pill fw-semibold shadow-sm">
+                Ver más <i class="bi bi-arrow-right-short ms-1"></i>
+              </a>
             </div>
 
             <!-- Carrusel Móvil -->
@@ -1614,12 +1701,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-19">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">41</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-19">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                         </button>
                       </div>
                     </div>
@@ -1644,12 +1733,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-20">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">12</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-20">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                         </button>
                       </div>
                     </div>
@@ -1673,12 +1764,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-21">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">19</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-21">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                         </button>
                       </div>
                     </div>
@@ -1702,12 +1795,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-22">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">5</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-22">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                         </button>
                       </div>
                     </div>
@@ -1731,12 +1826,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-23">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">23</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-23">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                         </button>
                       </div>
                     </div>
@@ -1760,12 +1857,14 @@
                       </div>
                       <div class="d-flex gap-2 pt-2 border-top">
                         <button
-                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                          class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-24">
+                          <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">30</span>
                         </button>
                         <button
-                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                          <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                          class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                          data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-24">
+                          <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                         </button>
                       </div>
                     </div>
@@ -1812,12 +1911,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 41
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-19">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">41</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-19">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                             </button>
                           </div>
                         </div>
@@ -1844,12 +1945,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 12
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-20">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">12</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-20">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                             </button>
                           </div>
                         </div>
@@ -1874,12 +1977,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 19
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-21">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">19</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 2
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-21">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">2</span>
                             </button>
                           </div>
                         </div>
@@ -1909,12 +2014,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 5
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-22">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">5</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-22">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                             </button>
                           </div>
                         </div>
@@ -1939,12 +2046,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 23
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-23">
+                              <i class="bi bi-hand-thumbs-up-fill"></i><span class="count-like">23</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 1
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-23">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">1</span>
                             </button>
                           </div>
                         </div>
@@ -1968,12 +2077,14 @@
                           </div>
                           <div class="d-flex gap-2 pt-2 border-top">
                             <button
-                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-up-fill"></i> 30
+                              class="btn btn-sm btn-outline-success flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="like" data-reporte-id="reporte-24">
+                              <i class="bi bi-hand-thumbs-up-fill"></i> <span class="count-like">30</span>
                             </button>
                             <button
-                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1">
-                              <i class="bi bi-hand-thumbs-down-fill"></i> 0
+                              class="btn btn-sm btn-outline-danger flex-fill d-flex align-items-center justify-content-center gap-1 btn-requiere-auth"
+                              data-action="votar-reporte" data-voto="dislike" data-reporte-id="reporte-24">
+                              <i class="bi bi-hand-thumbs-down-fill"></i> <span class="count-dislike">0</span>
                             </button>
                           </div>
                         </div>
@@ -1984,17 +2095,19 @@
               </div>
 
               <!-- Flechas -->
-              <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselSemaforos"
-                data-bs-slide="prev">
-                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                  style="width: 40px; height: 40px">
+              <button
+                class="carousel-control-prev w-auto pe-none position-absolute top-50 translate-middle-y start-0 ms-n3 ms-md-n4"
+                type="button" data-bs-target="#carouselSemaforos" data-bs-slide="prev">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+                  style="width: 40px; height: 40px;">
                   <i class="bi bi-chevron-left text-white"></i>
                 </span>
               </button>
-              <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselSemaforos"
-                data-bs-slide="next" style="right: -2rem;">
-                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow"
-                  style="width: 40px; height: 40px">
+              <button
+                class="carousel-control-next w-auto pe-none position-absolute top-50 translate-middle-y end-0 me-n3 me-md-n4"
+                type="button" data-bs-target="#carouselSemaforos" data-bs-slide="next">
+                <span class="bg-dark p-2 rounded-circle d-flex align-items-center justify-content-center shadow pe-auto"
+                  style="width: 40px; height: 40px;">
                   <i class="bi bi-chevron-right text-white"></i>
                 </span>
               </button>
