@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Constantes de almacenamiento
   const CLAVE_NOMBRE = "sostucumanNombre";
   const CLAVE_EMAIL = "sostucumanEmail";
 
+  // Elementos DOM
   const formLogin = document.getElementById("formLogin");
   const formRegistro = document.getElementById("formRegistro");
   const modalAuthEl = document.getElementById("modalAuth");
   const modalAuth = modalAuthEl ? new bootstrap.Modal(modalAuthEl) : null;
 
-  /* Validation & Error Helpers */
+  /* ==========================================
+     Validation & Error Helpers
+     ========================================== */
   function esEmailValido(valor) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim());
   }
@@ -33,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Manejo de sesión localStorage */
+  /* ==========================================
+     Manejo de sesión (localStorage)
+     ========================================== */
   window.obtenerUsuario = function () {
     const nombreGuardado = localStorage.getItem(CLAVE_NOMBRE);
     const emailGuardado = localStorage.getItem(CLAVE_EMAIL);
@@ -45,12 +51,68 @@ document.addEventListener("DOMContentLoaded", () => {
   function guardarUsuario(nombre, email) {
     localStorage.setItem(CLAVE_NOMBRE, nombre);
     localStorage.setItem(CLAVE_EMAIL, email);
+    if (typeof renderizarNavbar === "function") {
+      renderizarNavbar();
+    }
   }
 
   function cerrarSesion() {
     localStorage.removeItem(CLAVE_NOMBRE);
     localStorage.removeItem(CLAVE_EMAIL);
-    renderizarNavbar();
+    if (typeof renderizarNavbar === "function") {
+      renderizarNavbar();
+    }
+  }
+
+  /* ==========================================
+     Interceptador de clics (Botones protegidos)
+     ========================================== */
+  document.addEventListener("click", (e) => {
+    // Verificamos si el elemento (o ancestro) tiene la clase 'btn-requiere-auth'
+    const btnProtegido = e.target.closest(".btn-requiere-auth");
+
+    if (btnProtegido) {
+      const usuarioLogeado = obtenerUsuario();
+
+      // Si NO está logeado, interceptamos la acción y abrimos el modal de autenticación
+      if (!usuarioLogeado) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        console.log("Acción interceptada: Se requiere iniciar sesión.");
+
+        if (modalAuth) {
+          modalAuth.show();
+        }
+      } else {
+        // Si SÍ está logeado, ejecutamos la acción privada
+        const accion = btnProtegido.getAttribute("data-action");
+        ejecutarAccionPrivada(accion, btnProtegido);
+      }
+    }
+  });
+
+  /* ==========================================
+     Acciones para usuarios autenticados
+     ========================================== */
+  function ejecutarAccionPrivada(accion, elemento) {
+    switch (accion) {
+      case "crear-reporte":
+        console.log("Abriendo formulario para crear reporte...");
+        const modalReporteEl = document.getElementById("modalNuevoReporte");
+        if (modalReporteEl) {
+          const modalReporte =
+            bootstrap.Modal.getInstance(modalReporteEl) ||
+            new bootstrap.Modal(modalReporteEl);
+          modalReporte.show();
+        }
+        break;
+      case "votar-reporte":
+        console.log("Sumando voto al reclamo...");
+        break;
+      default:
+        console.log("Acción permitida.");
+    }
   }
 
   /* Render de navbar */
