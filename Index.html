@@ -82,8 +82,8 @@
             </p>
             <div class="d-flex flex-wrap justify-content-center gap-3">
               <button type="button"
-                class="btn btn-outline-primary border-white text-white btn-lg px-4 py-2 rounded-3 fw-semibold shadow-sm"
-                data-bs-toggle="modal" data-bs-target="#modalNuevoReporte">
+                class="btn btn-outline-primary btn-requiere-auth border-white text-white btn-lg px-4 py-2 rounded-3 fw-semibold shadow-sm"
+                data-action="crear-reporte">
                 Hacer un reporte
               </button>
               <a href="#reportes" class="btn btn-outline-light btn-lg px-4 py-2 rounded-3 fw-semibold">
@@ -335,8 +335,8 @@
             <h2 class="h1 fw-bold text-dark mb-0">Reportes activos</h2>
           </div>
           <div class="col-md-4 text-center text-md-end mt-3 mt-md-0">
-            <button type="button" class="btn btn-primary rounded-3 fw-bold shadow-sm px-4 py-2" data-bs-toggle="modal"
-              data-bs-target="#modalNuevoReporte">
+            <button type="button" class="btn btn-primary btn-requiere-auth rounded-3 fw-bold shadow-sm px-4 py-2"
+              data-action="crear-reporte">
               <i class="bi bi-plus-lg me-1"></i> Nuevo reporte
             </button>
           </div>
@@ -2133,14 +2133,16 @@
               <form id="formLogin" novalidate>
                 <div class="mb-3">
                   <label for="loginEmail" class="form-label fw-semibold small">Correo electrónico</label>
-                  <input type="email" class="form-control rounded-3 py-2" id="loginEmail"
-                    placeholder="vos@correo.com" />
+                  <input type="email" class="form-control rounded-3 py-2" id="loginEmail" placeholder="vos@correo.com"
+                    required maxlength="254" autocomplete="username" spellcheck="false" autocorrect="off"
+                    autocapitalize="none" />
                   <div class="invalid-feedback" id="loginEmailError"></div>
                 </div>
                 <div class="mb-3">
                   <label for="loginPassword" class="form-label fw-semibold small">Contraseña</label>
-                  <input type="password" class="form-control rounded-3 py-2" id="loginPassword"
-                    placeholder="••••••••" />
+                  <input type="password" class="form-control rounded-3 py-2" id="loginPassword" placeholder="••••••••"
+                    required minlength="8" maxlength="128" autocomplete="current-password" spellcheck="false"
+                    autocorrect="off" autocapitalize="none" />
                   <div class="invalid-feedback" id="loginPasswordError"></div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
@@ -2154,24 +2156,30 @@
               <form id="formRegistro" novalidate>
                 <div class="mb-3">
                   <label for="regNombre" class="form-label fw-semibold small">Nombre y apellido</label>
-                  <input type="text" class="form-control rounded-3 py-2" id="regNombre" placeholder="Ej: Sofía Pérez" />
+                  <input type="text" class="form-control rounded-3 py-2" id="regNombre" placeholder="Ej: Sofía Pérez"
+                    placeholder="Ej: Sofía Pérez" required minlength="3" maxlength="100"
+                    pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s']+$" autocomplete="name" spellcheck="false" />
                   <div class="invalid-feedback" id="regNombreError"></div>
                 </div>
                 <div class="mb-3">
                   <label for="regEmail" class="form-label fw-semibold small">Correo electrónico</label>
-                  <input type="email" class="form-control rounded-3 py-2" id="regEmail" placeholder="vos@correo.com" />
+                  <input type="email" class="form-control rounded-3 py-2" id="regEmail" placeholder="vos@correo.com"
+                    required maxlength="254" autocomplete="email" spellcheck="false" autocorrect="off"
+                    autocapitalize="none" />
                   <div class="invalid-feedback" id="regEmailError"></div>
                 </div>
                 <div class="mb-3">
                   <label for="regPassword" class="form-label fw-semibold small">Contraseña</label>
                   <input type="password" class="form-control rounded-3 py-2" id="regPassword"
-                    placeholder="Mínimo 6 caracteres" />
+                    placeholder="Mínimo 6 caracteres" required minlength="8" maxlength="128" autocomplete="new-password"
+                    spellcheck="false" autocorrect="off" autocapitalize="none" />
                   <div class="invalid-feedback" id="regPasswordError"></div>
                 </div>
                 <div class="mb-3">
                   <label for="regPasswordConfirm" class="form-label fw-semibold small">Repetir contraseña</label>
                   <input type="password" class="form-control rounded-3 py-2" id="regPasswordConfirm"
-                    placeholder="••••••••" />
+                    placeholder="••••••••" required minlength="8" maxlength="128" autocomplete="new-password"
+                    spellcheck="false" autocorrect="off" autocapitalize="none" />
                   <div class="invalid-feedback" id="regPasswordConfirmError"></div>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-2 mt-2">
@@ -2226,7 +2234,8 @@
                   Título breve
                 </label>
                 <input type="text" class="form-control rounded-3 py-2" id="inputTitulo"
-                  placeholder="Ej: Bache en Av. Mate de Luna" required />
+                  placeholder="Ej: Bache en Av. Mate de Luna" required minlength="5" maxlength="100" autocomplete="off"
+                  spellcheck="true" />
                 <div class="invalid-feedback">Ingresá un título representativo.</div>
               </div>
 
@@ -2237,7 +2246,8 @@
                 </label>
                 <div class="input-group">
                   <input type="text" class="form-control rounded-start-3 py-2" id="inputUbicacion"
-                    placeholder="Ej: San Martín 500, San Miguel de Tucumán" required />
+                    placeholder="Ej: San Martín 500, San Miguel de Tucumán" required minlength="5" maxlength="200"
+                    autocomplete="street-address" spellcheck="false" />
                   <button class="btn btn-outline-secondary px-2 px-sm-3 d-flex align-items-center gap-1" type="button"
                     id="btnGeolocalizar" title="Usar mi ubicación actual">
                     <i class="bi bi-crosshair"></i> <span class="d-none d-sm-inline">Mi ubicación</span>
@@ -2259,7 +2269,8 @@
                   <i class="bi bi-text-paragraph me-1"></i> Descripción del problema
                 </label>
                 <textarea class="form-control rounded-3" id="textareaDescripcion" rows="3"
-                  placeholder="Detallá lo que sucede..." required></textarea>
+                  placeholder="Detallá lo que sucede..." required minlength="10" maxlength="1000"
+                  spellcheck="true"></textarea>
                 <div class="invalid-feedback">Por favor agrega una breve descripción.</div>
               </div>
 
@@ -2268,7 +2279,8 @@
                 <label for="inputFoto" class="form-label fw-semibold text-secondary small">
                   <i class="bi bi-camera-fill me-1 text-primary"></i> Foto del problema (Opcional)
                 </label>
-                <input type="file" class="form-control rounded-3" id="inputFoto" accept="image/*" />
+                <input type="file" class="form-control rounded-3" id="inputFoto"
+                  accept="image/jpeg,image/png,image/webp" />
 
                 <!-- Previsualización de la imagen -->
                 <div id="previewContainer" class="mt-3 d-none text-center position-relative">
