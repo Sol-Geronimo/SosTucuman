@@ -1,13 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Constantes de almacenamiento
   const CLAVE_NOMBRE = "sostucumanNombre";
   const CLAVE_EMAIL = "sostucumanEmail";
 
+  // Elementos DOM
   const formLogin = document.getElementById("formLogin");
   const formRegistro = document.getElementById("formRegistro");
   const modalAuthEl = document.getElementById("modalAuth");
   const modalAuth = modalAuthEl ? new bootstrap.Modal(modalAuthEl) : null;
 
-  /* Validation & Error Helpers */
+  /* ==========================================
+     Validation & Error Helpers
+     ========================================== */
   function esEmailValido(valor) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim());
   }
@@ -33,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* Manejo de sesión localStorage */
+  /* ==========================================
+     Manejo de sesión (localStorage)
+     ========================================== */
   window.obtenerUsuario = function () {
     const nombreGuardado = localStorage.getItem(CLAVE_NOMBRE);
     const emailGuardado = localStorage.getItem(CLAVE_EMAIL);
@@ -45,12 +51,69 @@ document.addEventListener("DOMContentLoaded", () => {
   function guardarUsuario(nombre, email) {
     localStorage.setItem(CLAVE_NOMBRE, nombre);
     localStorage.setItem(CLAVE_EMAIL, email);
+    if (typeof renderizarNavbar === "function") {
+      renderizarNavbar();
+    }
   }
 
   function cerrarSesion() {
     localStorage.removeItem(CLAVE_NOMBRE);
     localStorage.removeItem(CLAVE_EMAIL);
-    renderizarNavbar();
+    if (typeof renderizarNavbar === "function") {
+      renderizarNavbar();
+    }
+  }
+
+  /* ==========================================
+     Interceptador de clics (Botones protegidos)
+     ========================================== */
+  document.addEventListener("click", (e) => {
+    // Verificamos si el elemento (o ancestro) tiene la clase 'btn-requiere-auth'
+    const btnProtegido = e.target.closest(".btn-requiere-auth");
+
+    if (btnProtegido) {
+      const usuarioLogeado = obtenerUsuario();
+
+      // Si NO está logeado, interceptamos la acción y abrimos el modal de autenticación
+      if (!usuarioLogeado) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        console.log("Acción interceptada: Se requiere iniciar sesión.");
+
+        if (modalAuth) {
+          modalAuth.show();
+        }
+      } else {
+        // Si SÍ está logeado, ejecutamos la acción privada
+        const accion = btnProtegido.getAttribute("data-action");
+        ejecutarAccionPrivada(accion, btnProtegido);
+      }
+    }
+  });
+
+  /* ==========================================
+     Acciones para usuarios autenticados
+     ========================================== */
+  function ejecutarAccionPrivada(accion, elemento) {
+    switch (accion) {
+      case "crear-reporte":
+        const modalReporteEl = document.getElementById("modalNuevoReporte");
+        if (modalReporteEl) {
+          const modalReporte =
+            bootstrap.Modal.getInstance(modalReporteEl) ||
+            new bootstrap.Modal(modalReporteEl);
+          modalReporte.show();
+        }
+        break;
+
+      case "votar-reporte":
+        gestionarVotoReporte(elemento);
+        break;
+
+      default:
+        console.log("Acción permitida.");
+    }
   }
 
   /* Render de navbar */
@@ -418,4 +481,89 @@ if (formNuevoReporte) {
       cargarReportes();
     }
   });
+}
+
+/*Lógica de Votación (Likes / Dislikes)*/
+function gestionarVotoReporte(btnAccionado) {
+  // Busco el boton correcto al presionar en una <i> por ejemplo
+  const btn = btnAccionado.closest("[data-voto]");
+  if (!btn) return;
+
+  // Se requiere que haya un usuario autenticado para registrar el voto.
+  const usuario = obtenerUsuario();
+  if (!usuario) return;
+
+  const tipoVoto = btn.getAttribute("data-voto"); // Retorna "like" o "dislike"
+  const reporteId = btn.getAttribute("data-reporte-id"); // ID único del reporte
+
+  // Buscar la tarjeta contenedora (.card) para manipular sus botones
+  const contenedor = btn.closest(".card");
+  if (!contenedor) return;
+
+  const btnLike = contenedor.querySelector('[data-voto="like"]');
+  const btnDislike = contenedor.querySelector('[data-voto="dislike"]');
+
+  // Seleccionar los spans encargados de mostrar los contadores numéricos
+  const spanLike = btnLike.querySelector(".count-like");
+  const spanDislike = btnDislike.querySelector(".count-dislike");
+
+  if (!spanLike || !spanDislike) return;
+
+  let likes = parseInt(spanLike.innerText) || 0;
+  let dislikes = parseInt(spanDislike.innerText) || 0;
+
+  const claveVotoUsuario = "voto_" + usuario.email + "_" + reporteId; // Guarda qué votó este usuario específico
+  const claveLikesTotal = "likes_total_" + reporteId; // Guarda el total acumulado de likes del reporte
+  const claveDislikesTotal = "dislikes_total_" + reporteId; // Guarda el total acumulado de dislikes del reporte
+
+  // Obtener el voto registrado previamente por el usuario (si existe)
+  const votoPrevio = localStorage.getItem(claveVotoUsuario);
+
+  // 6. Lógica de votación:
+
+  if (votoPrevio === tipoVoto) {
+    localStorage.removeItem(claveVotoUsuario);
+    if (tipoVoto === "like") {
+      likes = Math.max(0, likes - 1);
+      btnLike.classList.remove("btn-success");
+      btnLike.classList.add("btn-outline-success");
+    } else {
+      dislikes = Math.max(0, dislikes - 1);
+      btnDislike.classList.remove("btn-danger");
+      btnDislike.classList.add("btn-outline-danger");
+    }
+  } else {
+    // Si ya tenía un voto previo diferente, se descuenta de su opción anterior
+    if (votoPrevio === "like") {
+      likes = Math.max(0, likes - 1);
+      btnLike.classList.remove("btn-success");
+      btnLike.classList.add("btn-outline-success");
+    } else if (votoPrevio === "dislike") {
+      dislikes = Math.max(0, dislikes - 1);
+      btnDislike.classList.remove("btn-danger");
+      btnDislike.classList.add("btn-outline-danger");
+    }
+
+    // Registrar la nueva elección del usuario en localStorage
+    localStorage.setItem(claveVotoUsuario, tipoVoto);
+
+    // Sumar el nuevo voto y resaltar visualmente el botón seleccionado
+    if (tipoVoto === "like") {
+      likes++;
+      btnLike.classList.remove("btn-outline-success");
+      btnLike.classList.add("btn-success");
+    } else {
+      dislikes++;
+      btnDislike.classList.remove("btn-outline-danger");
+      btnDislike.classList.add("btn-danger");
+    }
+  }
+
+  // Actualizar la interfaz de usuario
+  spanLike.innerText = likes;
+  spanDislike.innerText = dislikes;
+
+  // 8. Guardar el estado actualizado de los contadores en localStorage
+  localStorage.setItem(claveLikesTotal, likes);
+  localStorage.setItem(claveDislikesTotal, dislikes);
 }
